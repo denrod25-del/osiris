@@ -78,6 +78,16 @@ const getLayerGroups = (theme: 'core' | 'ghost') => {
     ],
   },
   {
+    label: 'ENVIRON',
+    fullLabel: 'ENVIRONMENT',
+    color: '#29B6F6',
+    layers: [
+      { key: 'water_ambient', label: 'Ambient Water', icon: Droplet, color: '#29B6F6', dataKey: 'water_ambient' },
+      { key: 'air_quality', label: 'Air Quality', icon: Wind, color: '#AB47BC', dataKey: 'air_quality' },
+      { key: 'water_drinking', label: 'Drinking Water', icon: Droplets, color: '#4DD0E1', dataKey: 'water_drinking' },
+    ],
+  },
+  {
     label: 'THREAT',
     fullLabel: 'THREATS & INFRA',
     color: '#D32F2F',
@@ -112,6 +122,33 @@ function Shield(props: any) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+  );
+}
+
+function Droplet(props: any) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M12 2.5 6.5 9a7.5 7.5 0 1 0 11 0z"/>
+    </svg>
+  );
+}
+
+function Droplets(props: any) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M7 16.3a4 4 0 0 1-1.4-7.5L9 4l3.4 4.8A4 4 0 0 1 11 16.3"/>
+      <path d="M12.6 19.6a3.3 3.3 0 1 0 5-4.2L15 12l-2.6 3.4a3.3 3.3 0 0 0 .2 4.2z"/>
+    </svg>
+  );
+}
+
+function Wind(props: any) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M3 8h11a2.5 2.5 0 1 0-2.5-2.5"/>
+      <path d="M3 12h16a2.5 2.5 0 1 1-2.5 2.5"/>
+      <path d="M3 16h7a2.5 2.5 0 1 1-2.5 2.5"/>
     </svg>
   );
 }
