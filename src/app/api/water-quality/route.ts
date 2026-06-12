@@ -43,8 +43,8 @@ async function fetchAmbient(): Promise<WaterStation[]> {
 // Fetch all PWS for one state from ECHO SDW API; returns WaterStation[] (violating only).
 async function fetchEchoState(state: string): Promise<WaterStation[]> {
   const base = 'https://echodata.epa.gov/echo';
-  // 30s budget covers: get_systems round-trip + multi-MB get_qid body download under 51-way contention
-  const signal = AbortSignal.timeout(30000);
+  // 60s budget: get_systems + multi-MB get_qid download; raised from 30s to match chunked (6-wide) concurrency
+  const signal = AbortSignal.timeout(60000);
 
   // Step 1: get_systems → QueryID
   const sysRes = await fetch(
@@ -73,15 +73,22 @@ async function fetchEchoState(state: string): Promise<WaterStation[]> {
   return parseEchoSystems(relevant);
 }
 
+function chunk<T>(arr: T[], n: number): T[][] {
+  const chunks: T[][] = [];
+  for (let i = 0; i < arr.length; i += n) chunks.push(arr.slice(i, i + n));
+  return chunks;
+}
+
 async function fetchDrinking(): Promise<WaterStation[]> {
-  const results = await Promise.allSettled(
-    US_STATES.map(state => fetchEchoState(state))
-  );
   const seen = new Map<string, WaterStation>();
-  for (const r of results) {
-    if (r.status !== 'fulfilled') continue;
-    for (const st of r.value) {
-      if (!seen.has(st.id)) seen.set(st.id, st);
+  // Process 6 states at a time to avoid saturating ECHO under 51-way parallelism
+  for (const batch of chunk(US_STATES, 6)) {
+    const results = await Promise.allSettled(batch.map(state => fetchEchoState(state)));
+    for (const r of results) {
+      if (r.status !== 'fulfilled') continue;
+      for (const st of r.value) {
+        if (!seen.has(st.id)) seen.set(st.id, st);
+      }
     }
   }
   return Array.from(seen.values()).slice(0, MAX_STATIONS);
