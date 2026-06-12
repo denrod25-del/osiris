@@ -1,22 +1,13 @@
 import { NextResponse } from 'next/server';
-import { parseUsgsIv, parseEchoSystems, WaterStation } from '@/lib/water-sources';
+import { parseUsgsIv, WaterStation } from '@/lib/water-sources';
+import { fetchDrinkingLive, MAX_STATIONS } from '@/lib/echo-drinking';
 import DRINKING_SNAPSHOT from '@/lib/data/drinking-snapshot.json';
-
-// All US states + DC abbreviations for ECHO fan-out
-const US_STATES = [
-  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
-  'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
-  'MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
-  'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC',
-  'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY','DC',
-];
 
 export const dynamic = 'force-dynamic';
 
 const USGS_PARAMS = '00010,00300,00400,00095,63680,99133';
 // Top-level 2-digit hydrologic regions covering the entire US (01–21).
 const HUCS = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21'];
-const MAX_STATIONS = 1500;
 const TTL_MS: Record<string, number> = { ambient: 10 * 60 * 1000, drinking: 12 * 60 * 60 * 1000 };
 const EMPTY_TTL_MS = 5 * 60 * 1000; // short TTL for empty results — avoids poisoning the long drinking/ambient TTL
 
@@ -36,63 +27,6 @@ async function fetchAmbient(): Promise<WaterStation[]> {
     if (r.status !== 'fulfilled' || !r.value) continue;
     for (const st of parseUsgsIv(r.value)) {
       if (!seen.has(st.id)) seen.set(st.id, st);
-    }
-  }
-  return Array.from(seen.values()).slice(0, MAX_STATIONS);
-}
-
-// Fetch all PWS for one state from ECHO SDW API; returns WaterStation[] (violating only).
-async function fetchEchoState(state: string): Promise<WaterStation[]> {
-  const base = 'https://echodata.epa.gov/echo';
-  // 60s budget: get_systems + multi-MB get_qid download; raised from 30s to match chunked (6-wide) concurrency
-  const signal = AbortSignal.timeout(60000);
-
-  // Step 1: get_systems → QueryID
-  const sysRes = await fetch(
-    `${base}/sdw_rest_services.get_systems?output=JSON&p_st=${state}`,
-    { signal, headers: { Accept: 'application/json' } }
-  );
-  if (!sysRes.ok) return [];
-  const sysJson = await sysRes.json();
-  const qid: string | undefined = sysJson?.Results?.QueryID;
-  if (!qid) return [];
-
-  // Step 2: get_qid → full WaterSystems JSON array
-  const qidRes = await fetch(
-    `${base}/sdw_rest_services.get_qid?qid=${qid}`,
-    { signal, headers: { Accept: 'application/json' } }
-  );
-  if (!qidRes.ok) return [];
-  const qidJson = await qidRes.json();
-  const waterSystems: any[] = qidJson?.Results?.WaterSystems ?? [];
-
-  // Pre-filter to reduce parseEchoSystems workload (parser drops anyway)
-  const relevant = waterSystems.filter(
-    (w: any) => (Number(w.VioFlag) || 0) !== 0 || w.HealthFlag === 'Yes'
-  );
-
-  return parseEchoSystems(relevant);
-}
-
-function chunk<T>(arr: T[], n: number): T[][] {
-  const chunks: T[][] = [];
-  for (let i = 0; i < arr.length; i += n) chunks.push(arr.slice(i, i + n));
-  return chunks;
-}
-
-// Live national fan-out across EPA ECHO. Takes minutes on a cold cache, so it
-// exceeds serverless function time limits — used only for self-host or to
-// regenerate the snapshot (via ?live=1). Serverless GETs use the snapshot below.
-async function fetchDrinkingLive(): Promise<WaterStation[]> {
-  const seen = new Map<string, WaterStation>();
-  // Process 6 states at a time to avoid saturating ECHO under 51-way parallelism
-  for (const batch of chunk(US_STATES, 6)) {
-    const results = await Promise.allSettled(batch.map(state => fetchEchoState(state)));
-    for (const r of results) {
-      if (r.status !== 'fulfilled') continue;
-      for (const st of r.value) {
-        if (!seen.has(st.id)) seen.set(st.id, st);
-      }
     }
   }
   return Array.from(seen.values()).slice(0, MAX_STATIONS);

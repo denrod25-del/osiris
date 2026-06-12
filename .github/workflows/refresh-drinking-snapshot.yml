@@ -1,0 +1,41 @@
+name: Refresh Drinking Water Snapshot
+
+on:
+  schedule:
+    # 06:00 UTC on the 1st of every month
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run snapshot refresh
+        run: npm run refresh:drinking
+
+      - name: Commit updated snapshot (if changed)
+        run: |
+          git diff --quiet src/lib/data/drinking-snapshot.json || (
+            git config user.name  "github-actions[bot]" &&
+            git config user.email "github-actions[bot]@users.noreply.github.com" &&
+            git add src/lib/data/drinking-snapshot.json &&
+            git commit -m "chore: refresh drinking-water snapshot [skip ci]" &&
+            git push
+          )
