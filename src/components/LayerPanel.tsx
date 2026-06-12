@@ -117,6 +117,29 @@ const getLayerGroups = (theme: 'core' | 'ghost') => {
   ];
 };
 
+// Color legend data for the ENVIRONMENT group
+const ENV_LEGEND: { section: string; entries: { label: string; color: string }[] }[] = [
+  {
+    section: 'Water status',
+    entries: [
+      { label: 'Good',     color: '#00E676' },
+      { label: 'Moderate', color: '#FFD700' },
+      { label: 'Poor',     color: '#FF1744' },
+      { label: 'Unknown',  color: '#607D8B' },
+    ],
+  },
+  {
+    section: 'Air (AQI PM2.5)',
+    entries: [
+      { label: 'Good',      color: '#00E676' },
+      { label: 'Moderate',  color: '#FFD700' },
+      { label: 'Sensitive', color: '#FF9500' },
+      { label: 'Unhealthy', color: '#FF1744' },
+      { label: 'Hazardous', color: '#8B0000' },
+    ],
+  },
+];
+
 // SVG component for Shield which was missing in the imports above
 function Shield(props: any) {
   return (
@@ -189,7 +212,7 @@ function LayerPanel({ data, activeLayers, setActiveLayers, isMobile, theme = 'co
               {group.layers.map((layer) => {
                 const isLayerActive = activeLayers[layer.key];
                 const count = getCount(layer.dataKey);
-                
+
                 return (
                   <button
                     key={layer.key}
@@ -201,12 +224,12 @@ function LayerPanel({ data, activeLayers, setActiveLayers, isMobile, theme = 'co
                       }
                     }}
                     className={`flex items-center gap-2 px-2 py-2 rounded border transition-colors ${
-                      isLayerActive 
-                        ? 'bg-white/10 border-white/20' 
+                      isLayerActive
+                        ? 'bg-white/10 border-white/20'
                         : 'bg-transparent border-white/5 hover:border-white/10'
                     }`}
                   >
-                    <div 
+                    <div
                       className={`w-2 h-2 rounded-full border flex-shrink-0 transition-all ${
                         isLayerActive ? 'bg-current border-current scale-100' : 'bg-transparent border-white/30 scale-75'
                       }`}
@@ -224,6 +247,30 @@ function LayerPanel({ data, activeLayers, setActiveLayers, isMobile, theme = 'co
                 );
               })}
             </div>
+            {group.label === 'ENVIRON' && (
+              <div className="mt-1 pt-2 border-t border-white/10">
+                {ENV_LEGEND.map((sec) => (
+                  <div key={sec.section} className="mb-1.5">
+                    <div className="text-[8px] font-mono tracking-widest text-white/30 uppercase mb-1">
+                      {sec.section}
+                    </div>
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                      {sec.entries.map((e) => (
+                        <div key={e.label} className="flex items-center gap-1">
+                          <div
+                            className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                            style={{ backgroundColor: e.color }}
+                          />
+                          <span className="text-[8px] font-mono text-white/40 uppercase tracking-wide">
+                            {e.label}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
 
@@ -353,6 +400,30 @@ function LayerPanel({ data, activeLayers, setActiveLayers, isMobile, theme = 'co
                         );
                       })}
                     </div>
+                    {group.label === 'ENVIRON' && (
+                      <div className="mt-3 pt-2 border-t border-white/10">
+                        {ENV_LEGEND.map((sec) => (
+                          <div key={sec.section} className="mb-2">
+                            <div className="text-[8px] font-mono tracking-widest text-white/30 uppercase mb-1">
+                              {sec.section}
+                            </div>
+                            <div className="flex flex-wrap gap-x-3 gap-y-1">
+                              {sec.entries.map((e) => (
+                                <div key={e.label} className="flex items-center gap-1">
+                                  <div
+                                    className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                                    style={{ backgroundColor: e.color }}
+                                  />
+                                  <span className="text-[8px] font-mono text-white/40 uppercase tracking-wide">
+                                    {e.label}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
