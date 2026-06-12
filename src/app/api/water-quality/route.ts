@@ -57,7 +57,7 @@ async function fetchEchoState(state: string): Promise<WaterStation[]> {
   // Step 2: get_qid → full WaterSystems JSON array
   const qidRes = await fetch(
     `${base}/sdw_rest_services.get_qid?qid=${qid}`,
-    { signal: AbortSignal.timeout(15000), headers: { Accept: 'application/json' } }
+    { signal, headers: { Accept: 'application/json' } }
   );
   if (!qidRes.ok) return [];
   const qidJson = await qidRes.json();
@@ -65,7 +65,7 @@ async function fetchEchoState(state: string): Promise<WaterStation[]> {
 
   // Pre-filter to reduce parseEchoSystems workload (parser drops anyway)
   const relevant = waterSystems.filter(
-    (w: any) => (Number(w.VioFlag) !== 0) || w.HealthFlag === 'Yes'
+    (w: any) => (Number(w.VioFlag) || 0) !== 0 || w.HealthFlag === 'Yes'
   );
 
   return parseEchoSystems(relevant);

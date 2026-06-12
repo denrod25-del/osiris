@@ -101,45 +101,6 @@ export function normalizeAirStations(airStations: any[]): WaterStation[] {
     }));
 }
 
-// Parse a CSV string into an array of row objects (handles quoted fields with commas).
-export function csvToObjects(csv: string): Record<string, string>[] {
-  const lines = csv.split('\n');
-  if (lines.length < 2) return [];
-  const headers = parseCsvRow(lines[0]);
-  const rows: Record<string, string>[] = [];
-  for (let i = 1; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line) continue;
-    const cols = parseCsvRow(line);
-    const obj: Record<string, string> = {};
-    for (let j = 0; j < headers.length; j++) {
-      obj[headers[j]] = cols[j] ?? '';
-    }
-    rows.push(obj);
-  }
-  return rows;
-}
-
-function parseCsvRow(row: string): string[] {
-  const result: string[] = [];
-  let current = '';
-  let inQuotes = false;
-  for (let i = 0; i < row.length; i++) {
-    const ch = row[i];
-    if (ch === '"') {
-      if (inQuotes && row[i + 1] === '"') { current += '"'; i++; }
-      else { inQuotes = !inQuotes; }
-    } else if (ch === ',' && !inQuotes) {
-      result.push(current);
-      current = '';
-    } else {
-      current += ch;
-    }
-  }
-  result.push(current);
-  return result;
-}
-
 // Deterministic jitter derived from PWSId char codes (max ±0.05°).
 function jitter(pwsId: string, axis: 0 | 1): number {
   let hash = 0;
@@ -153,11 +114,11 @@ function jitter(pwsId: string, axis: 0 | 1): number {
 }
 
 // Phase 2 — Task 9: parse EPA ECHO SDW download rows into shared WaterStation shape.
-// Accepts an array of row objects (CSV rows parsed into objects by csvToObjects).
+// Accepts the Results.WaterSystems[] array from the ECHO sdw_rest_services.get_qid JSON endpoint.
 export function parseEchoSystems(rows: any): WaterStation[] {
   if (!Array.isArray(rows)) return [];
 
-  const centroids = COUNTY_CENTROIDS as Record<string, [number, number]>;
+  const centroids = COUNTY_CENTROIDS as unknown as Record<string, [number, number]>;
   const stations: WaterStation[] = [];
 
   for (const row of rows) {

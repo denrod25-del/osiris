@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { parseUsgsIv, normalizeAirStations, parseEchoSystems } from './water-sources';
+import COUNTY_CENTROIDS from './data/county-centroids.json';
 
 // Minimal fixture mirroring USGS IV WaterML-JSON. Two parameters for one site.
 const USGS_FIXTURE = {
@@ -169,5 +170,40 @@ describe('parseEchoSystems', () => {
     expect(parseEchoSystems(null)).toEqual([]);
     expect(parseEchoSystems(undefined)).toEqual([]);
     expect(parseEchoSystems([])).toEqual([]);
+  });
+
+  it('places violating systems within jitter bounds of their county centroid', () => {
+    const centroids = COUNTY_CENTROIDS as unknown as Record<string, [number, number]>;
+    const out = parseEchoSystems(ECHO_FIXTURE);
+    // CITY OF DOVER → FIPS 10001 = Kent County, DE
+    const dover = out.find(s => s.name === 'CITY OF DOVER')!;
+    const [kentLat, kentLng] = centroids['10001'];
+    expect(Math.abs(dover.lat - kentLat)).toBeLessThan(0.06);
+    expect(Math.abs(dover.lng - kentLng)).toBeLessThan(0.06);
+    // SMYRNA WATER DEPT → FIPS 10003 = New Castle County, DE
+    const smyrna = out.find(s => s.name === 'SMYRNA WATER DEPT')!;
+    const [newCastleLat, newCastleLng] = centroids['10003'];
+    expect(Math.abs(smyrna.lat - newCastleLat)).toBeLessThan(0.06);
+    expect(Math.abs(smyrna.lng - newCastleLng)).toBeLessThan(0.06);
+  });
+
+  it('falls back to monitoring/reporting reason string when ViolationCategories is null', () => {
+    const fixture = [
+      {
+        PWSName: 'MR ONLY SYSTEM',
+        PWSId: 'DE0000099',
+        HealthFlag: 'No',
+        MrFlag: 'Yes',
+        VioFlag: 1,
+        DfrUrl: 'https://echo.epa.gov/detailed-facility-report?fid=110099999',
+        FIPSCodes: '10001', // Kent County, DE
+        ViolationCategories: null,
+        PopulationServedCount: 2000,
+      },
+    ];
+    const out = parseEchoSystems(fixture);
+    expect(out).toHaveLength(1);
+    expect(out[0].reason).toBe('Monitoring/Reporting violation');
+    expect(out[0].status).toBe('Moderate');
   });
 });
