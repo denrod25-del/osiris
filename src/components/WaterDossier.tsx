@@ -81,7 +81,7 @@ function StationRow({ s }: { s: Station & { distKm: number } }) {
       </div>
     </div>
   );
-  return s.url ? (
+  return typeof s.url === 'string' && s.url.startsWith('https://') ? (
     <a href={s.url} target="_blank" rel="noopener noreferrer" className="block">{content}</a>
   ) : content;
 }

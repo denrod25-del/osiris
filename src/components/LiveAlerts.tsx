@@ -95,7 +95,7 @@ export default function LiveAlerts({ data, onLocate, onWatchFeed }: LiveAlertsPr
         alerts.push({
           type: 'news',
           title: `⚠ Poor water quality: ${s.name}`,
-          description: `⚠ Poor water quality: ${s.name}${s.reason ? ` — ${s.reason}` : ''}`,
+          description: `${s.name}${s.reason ? ` — ${s.reason}` : ''}`,
           source: 'USGS Ambient',
           lat: s.lat, lng: s.lng,
           severity: 'HIGH',
@@ -112,7 +112,7 @@ export default function LiveAlerts({ data, onLocate, onWatchFeed }: LiveAlertsPr
         alerts.push({
           type: 'news',
           title: `🚱 Health-based drinking violation: ${s.name}`,
-          description: `🚱 Health-based drinking violation: ${s.name}${s.reason ? ` — ${s.reason}` : ''}`,
+          description: `${s.name}${s.reason ? ` — ${s.reason}` : ''}`,
           source: 'EPA ECHO',
           lat: s.lat, lng: s.lng,
           severity: 'CRITICAL',
