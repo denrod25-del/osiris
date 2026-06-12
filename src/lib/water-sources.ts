@@ -1,4 +1,4 @@
-import { assessWater, WaterParams, WaterStatus } from './water-quality';
+import { assessWater, WaterParams } from './water-quality';
 
 export interface WaterStation {
   id: string;
@@ -6,7 +6,9 @@ export interface WaterStation {
   name: string;
   lat: number;
   lng: number;
-  status: WaterStatus | string;
+  // 'Good' | 'Moderate' | 'Poor' | 'Unknown' for USGS/EPA water stations;
+  // OpenAQ AQI level label (e.g. 'Unhealthy') for air-quality stations.
+  status: string;
   color: string;
   reason: string;
   params: Record<string, number | string | undefined>;
@@ -24,11 +26,12 @@ const USGS_PARAM_MAP: Record<string, keyof WaterParams> = {
   '99133': 'nitrate',
 };
 
+interface Acc { name: string; lat: number; lng: number; params: WaterParams; updated: string | null; }
+
 export function parseUsgsIv(json: any): WaterStation[] {
   const series = json?.value?.timeSeries ?? [];
   if (!Array.isArray(series)) return [];
 
-  interface Acc { name: string; lat: number; lng: number; params: WaterParams; raw: Record<string, number>; updated: string | null; }
   const bySite = new Map<string, Acc>();
 
   for (const ts of series) {
@@ -49,13 +52,12 @@ export function parseUsgsIv(json: any): WaterStation[] {
 
     let rec = bySite.get(siteId);
     if (!rec) {
-      rec = { name: si?.siteName ?? siteId, lat, lng, params: {}, raw: {}, updated: null };
+      rec = { name: si?.siteName ?? siteId, lat, lng, params: {}, updated: null };
       bySite.set(siteId, rec);
     }
     rec.params[key] = num;
-    rec.raw[key] = num;
     const dt: string | null = last?.dateTime ?? null;
-    if (dt && (!rec.updated || dt > rec.updated)) rec.updated = dt;
+    if (dt && (!rec.updated || new Date(dt).getTime() > new Date(rec.updated).getTime())) rec.updated = dt;
   }
 
   const stations: WaterStation[] = [];
@@ -70,7 +72,7 @@ export function parseUsgsIv(json: any): WaterStation[] {
       status: a.status,
       color: a.color,
       reason: a.reason,
-      params: { ...rec.raw },
+      params: { ...rec.params },
       lastUpdated: rec.updated,
       url: `https://waterdata.usgs.gov/monitoring-location/${siteId}/`,
     });
