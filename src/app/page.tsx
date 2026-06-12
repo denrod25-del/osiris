@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Layers, BarChart3, Newspaper, Search, X, Globe, MapPinned, Radar, Satellite, Moon, ExternalLink, AlertTriangle, Activity, Database, Wifi, Play, Network } from 'lucide-react';
+import { Layers, BarChart3, Newspaper, Search, X, Globe, MapPinned, Radar, Satellite, Moon, ExternalLink, AlertTriangle, Activity, Database, Wifi, Play, Network, Droplets } from 'lucide-react';
 import { normalizeAirStations } from '@/lib/water-sources';
 import IntelFeed from '@/components/IntelFeed';
 import MarketsPanel from '@/components/MarketsPanel';
@@ -22,6 +22,7 @@ const LayerPanel = dynamic(() => import('@/components/LayerPanel'));
 const CameraViewer = dynamic(() => import('@/components/CameraViewer'));
 const OsintPanel = dynamic(() => import('@/components/OsintPanel'));
 const EntityGraphPanel = dynamic(() => import('@/components/EntityGraphPanel'));
+const WaterDossier = dynamic(() => import('@/components/WaterDossier'));
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -90,7 +91,9 @@ export default function Dashboard() {
   const data = dataRef.current;
 
   const [backendStatus, setBackendStatus] = useState<'connecting' | 'connected' | 'error'>('connecting');
-  const [mapView, setMapView] = useState({ zoom: 2.5, latitude: 20 });
+  const [mapView, setMapView] = useState({ zoom: 2.5, latitude: 20, longitude: 0 });
+  const [mapCenter, setMapCenter] = useState({ lat: 20, lng: 0 });
+  const [showWaterDossier, setShowWaterDossier] = useState(false);
   const [flyToLocation, setFlyToLocation] = useState<{ lat: number; lng: number; ts: number } | null>(null);
   const [globalStats, setGlobalStats] = useState<any>(null);
   const mouseCoordsRef = useRef<{ lat: number; lng: number } | null>(null);
@@ -774,7 +777,7 @@ export default function Dashboard() {
           onEntityClick={handleEntityClick} 
           onMouseCoords={handleMouseCoords} 
           onRightClick={handleRightClick} 
-          onViewStateChange={setMapView} 
+          onViewStateChange={(vs) => { setMapView(vs); setMapCenter({ lat: vs.latitude, lng: vs.longitude }); }}
           flyToLocation={flyToLocation}
           sweepData={sweepData}
           scanTargets={scanTargets}
@@ -818,6 +821,18 @@ export default function Dashboard() {
           )}
           <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 text-[9px] font-mono text-[var(--text-muted)] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity glass-panel px-2 py-1 z-[300]">
             {mapStyle === 'dark' ? 'SATELLITE' : 'NIGHT MODE'}
+          </span>
+        </button>
+
+        {/* My Area Water Dossier Toggle */}
+        <button
+          onClick={() => setShowWaterDossier(v => !v)}
+          className={`glass-panel p-3.5 pointer-events-auto transition-colors group relative ${showWaterDossier ? 'border-[var(--cyan-primary)]/60' : 'hover:border-[var(--gold-primary)]/40'}`}
+          title="My Area — nearest water/air sensors"
+        >
+          <Droplets className={`w-5 h-5 group-hover:scale-110 transition-transform ${showWaterDossier ? 'text-[var(--cyan-primary)]' : 'text-[var(--cyan-primary)]/70'}`} />
+          <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 text-[9px] font-mono text-[var(--text-muted)] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity glass-panel px-2 py-1 z-[300]">
+            MY AREA
           </span>
         </button>
 
@@ -1153,6 +1168,13 @@ export default function Dashboard() {
           </div>
         </motion.div>
       )}
+
+      {/* ── My Area Water Dossier ── */}
+      <AnimatePresence>
+        {showWaterDossier && (
+          <WaterDossier center={mapCenter} data={dataRef.current} onClose={() => setShowWaterDossier(false)} />
+        )}
+      </AnimatePresence>
 
       {/* ── Camera Viewer ── */}
       <CameraViewer
