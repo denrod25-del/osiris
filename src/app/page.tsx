@@ -478,6 +478,9 @@ export default function Dashboard() {
     if (activeLayers.maritime) {
       intervals.push(setInterval(() => fetchEndpoint('/api/maritime', d => ({ maritime_ports: d.ports, maritime_chokepoints: d.chokepoints, maritime_ships: d.ships })), 10000)); // 10s
     }
+    if (activeLayers.water_ambient) {
+      intervals.push(setInterval(() => fetchEndpoint('/api/water-quality?source=ambient', d => ({ water_ambient: d.stations })), 900000)); // 15 min
+    }
     return () => intervals.forEach(clearInterval);
   }, [activeLayers, fetchEndpoint]);
 

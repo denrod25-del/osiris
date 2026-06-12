@@ -86,6 +86,40 @@ export default function LiveAlerts({ data, onLocate, onWatchFeed }: LiveAlertsPr
     });
   }
 
+  // Ambient water — Poor USGS stations (layer must be loaded)
+  if (data.water_ambient?.length) {
+    data.water_ambient
+      .filter((s: any) => s.status === 'Poor')
+      .slice(0, 10)
+      .forEach((s: any) => {
+        alerts.push({
+          type: 'news',
+          title: `⚠ Poor water quality: ${s.name}`,
+          description: `⚠ Poor water quality: ${s.name}${s.reason ? ` — ${s.reason}` : ''}`,
+          source: 'USGS Ambient',
+          lat: s.lat, lng: s.lng,
+          severity: 'HIGH',
+        });
+      });
+  }
+
+  // Drinking water — Poor EPA stations (layer must be loaded)
+  if (data.water_drinking?.length) {
+    data.water_drinking
+      .filter((s: any) => s.status === 'Poor')
+      .slice(0, 10)
+      .forEach((s: any) => {
+        alerts.push({
+          type: 'news',
+          title: `🚱 Health-based drinking violation: ${s.name}`,
+          description: `🚱 Health-based drinking violation: ${s.name}${s.reason ? ` — ${s.reason}` : ''}`,
+          source: 'EPA ECHO',
+          lat: s.lat, lng: s.lng,
+          severity: 'CRITICAL',
+        });
+      });
+  }
+
   // Built-in live feeds (always present)
   BUILTIN_FEEDS.forEach(f => {
     alerts.push({
