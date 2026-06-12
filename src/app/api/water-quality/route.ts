@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { parseUsgsIv, parseEchoSystems, WaterStation } from '@/lib/water-sources';
+import DRINKING_SNAPSHOT from '@/lib/data/drinking-snapshot.json';
 
 // All US states + DC abbreviations for ECHO fan-out
 const US_STATES = [
@@ -79,7 +80,10 @@ function chunk<T>(arr: T[], n: number): T[][] {
   return chunks;
 }
 
-async function fetchDrinking(): Promise<WaterStation[]> {
+// Live national fan-out across EPA ECHO. Takes minutes on a cold cache, so it
+// exceeds serverless function time limits — used only for self-host or to
+// regenerate the snapshot (via ?live=1). Serverless GETs use the snapshot below.
+async function fetchDrinkingLive(): Promise<WaterStation[]> {
   const seen = new Map<string, WaterStation>();
   // Process 6 states at a time to avoid saturating ECHO under 51-way parallelism
   for (const batch of chunk(US_STATES, 6)) {
@@ -94,13 +98,26 @@ async function fetchDrinking(): Promise<WaterStation[]> {
   return Array.from(seen.values()).slice(0, MAX_STATIONS);
 }
 
+// Default drinking-water source: a pre-generated snapshot of US EPA violations,
+// baked into the build so it serves instantly within serverless time limits.
+// Refresh it with: node scripts/refresh-drinking-snapshot.mjs (see that file).
+async function fetchDrinking(): Promise<WaterStation[]> {
+  const snapshot = DRINKING_SNAPSHOT as WaterStation[];
+  if (Array.isArray(snapshot) && snapshot.length) return snapshot.slice(0, MAX_STATIONS);
+  return fetchDrinkingLive();
+}
+
 export async function GET(request: Request) {
-  const source = new URL(request.url).searchParams.get('source') === 'drinking' ? 'drinking' : 'ambient';
+  const params = new URL(request.url).searchParams;
+  const source = params.get('source') === 'drinking' ? 'drinking' : 'ambient';
+  // ?live=1 forces the live national ECHO fan-out (for self-host or snapshot regen),
+  // bypassing both the snapshot and the cache. Slow — not for serverless.
+  const live = params.get('live') === '1';
   try {
     const now = Date.now();
     const cached = cache[source];
     const effectiveTTL = cached?.stations.length === 0 ? EMPTY_TTL_MS : TTL_MS[source];
-    if (cached && now - cached.ts < effectiveTTL) {
+    if (!live && cached && now - cached.ts < effectiveTTL) {
       return NextResponse.json({
         source,
         total: cached.stations.length,
@@ -109,7 +126,9 @@ export async function GET(request: Request) {
         cached: true,
       });
     }
-    const stations = source === 'drinking' ? await fetchDrinking() : await fetchAmbient();
+    const stations = source === 'drinking'
+      ? (live ? await fetchDrinkingLive() : await fetchDrinking())
+      : await fetchAmbient();
     cache[source] = { ts: now, stations };
     return NextResponse.json({
       source,
