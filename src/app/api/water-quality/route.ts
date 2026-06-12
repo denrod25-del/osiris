@@ -1,6 +1,15 @@
 import { NextResponse } from 'next/server';
 import { parseUsgsIv, parseEchoSystems, WaterStation } from '@/lib/water-sources';
 
+// All US states + DC abbreviations for ECHO fan-out
+const US_STATES = [
+  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
+  'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
+  'MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
+  'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC',
+  'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY','DC',
+];
+
 export const dynamic = 'force-dynamic';
 
 const USGS_PARAMS = '00010,00300,00400,00095,63680,99133';
@@ -30,9 +39,50 @@ async function fetchAmbient(): Promise<WaterStation[]> {
   return Array.from(seen.values()).slice(0, MAX_STATIONS);
 }
 
-// Phase 2 (Task 10) replaces this stub with a real EPA ECHO fetch.
+// Fetch all PWS for one state from ECHO SDW API; returns WaterStation[] (violating only).
+async function fetchEchoState(state: string): Promise<WaterStation[]> {
+  const base = 'https://echodata.epa.gov/echo';
+  const signal = AbortSignal.timeout(15000);
+
+  // Step 1: get_systems → QueryID
+  const sysRes = await fetch(
+    `${base}/sdw_rest_services.get_systems?output=JSON&p_st=${state}`,
+    { signal, headers: { Accept: 'application/json' } }
+  );
+  if (!sysRes.ok) return [];
+  const sysJson = await sysRes.json();
+  const qid: string | undefined = sysJson?.Results?.QueryID;
+  if (!qid) return [];
+
+  // Step 2: get_qid → full WaterSystems JSON array
+  const qidRes = await fetch(
+    `${base}/sdw_rest_services.get_qid?qid=${qid}`,
+    { signal: AbortSignal.timeout(15000), headers: { Accept: 'application/json' } }
+  );
+  if (!qidRes.ok) return [];
+  const qidJson = await qidRes.json();
+  const waterSystems: any[] = qidJson?.Results?.WaterSystems ?? [];
+
+  // Pre-filter to reduce parseEchoSystems workload (parser drops anyway)
+  const relevant = waterSystems.filter(
+    (w: any) => (Number(w.VioFlag) !== 0) || w.HealthFlag === 'Yes'
+  );
+
+  return parseEchoSystems(relevant);
+}
+
 async function fetchDrinking(): Promise<WaterStation[]> {
-  return [];
+  const results = await Promise.allSettled(
+    US_STATES.map(state => fetchEchoState(state))
+  );
+  const seen = new Map<string, WaterStation>();
+  for (const r of results) {
+    if (r.status !== 'fulfilled') continue;
+    for (const st of r.value) {
+      if (!seen.has(st.id)) seen.set(st.id, st);
+    }
+  }
+  return Array.from(seen.values()).slice(0, MAX_STATIONS);
 }
 
 export async function GET(request: Request) {
