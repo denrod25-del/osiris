@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseUsgsIv, normalizeAirStations } from './water-sources';
+import { parseUsgsIv, normalizeAirStations, parseEchoSystems } from './water-sources';
 
 // Minimal fixture mirroring USGS IV WaterML-JSON. Two parameters for one site.
 const USGS_FIXTURE = {
@@ -78,5 +78,96 @@ describe('normalizeAirStations', () => {
 
   it('returns empty array on non-array input', () => {
     expect(normalizeAirStations(undefined as any)).toEqual([]);
+  });
+});
+
+// ECHO SDW fixture using REAL field names confirmed from live API (CSV download endpoint).
+// The API returns CSV rows parsed into objects; no lat/lng in ECHO data → parser uses
+// county FIPS centroids from a built-in lookup table.
+// FIPSCodes '10001' = Kent County, DE (centroid in lookup table).
+// FIPSCodes '10003' = New Castle County, DE (centroid in lookup table).
+// FIPSCodes ''      = unknown/missing county → dropped (no coords available).
+// Field names match the CSV header from sdw_rest_services.get_download exactly.
+const ECHO_FIXTURE = [
+  {
+    PWSName: 'CITY OF DOVER',
+    PWSId: 'DE0000001',
+    HealthFlag: 'Yes',  // health-based violation → Poor
+    MrFlag: 'No',
+    VioFlag: 1,
+    DfrUrl: 'https://echo.epa.gov/detailed-facility-report?fid=110001234',
+    FIPSCodes: '10001', // Kent County, DE
+    ViolationCategories: 'Treatment Technique Violation',
+    PopulationServedCount: 38000,
+  },
+  {
+    PWSName: 'SMYRNA WATER DEPT',
+    PWSId: 'DE0000002',
+    HealthFlag: 'No',   // monitoring/reporting only → Moderate
+    MrFlag: 'Yes',
+    VioFlag: 1,
+    DfrUrl: 'https://echo.epa.gov/detailed-facility-report?fid=110002345',
+    FIPSCodes: '10003', // New Castle County, DE
+    ViolationCategories: 'Monitoring and Reporting',
+    PopulationServedCount: 12000,
+  },
+  {
+    PWSName: 'CLEAN SYSTEM',
+    PWSId: 'DE0000003',
+    HealthFlag: 'No',
+    MrFlag: 'No',
+    VioFlag: 0,         // no violations → dropped
+    DfrUrl: 'https://echo.epa.gov/detailed-facility-report?fid=110003456',
+    FIPSCodes: '10003',
+    ViolationCategories: null,
+    PopulationServedCount: 5000,
+  },
+  {
+    PWSName: 'NO COUNTY SYSTEM',
+    PWSId: 'DE0000004',
+    HealthFlag: 'Yes',
+    MrFlag: 'No',
+    VioFlag: 1,
+    DfrUrl: 'https://echo.epa.gov/detailed-facility-report?fid=110004567',
+    FIPSCodes: '',      // unknown county → no centroid → dropped
+    ViolationCategories: 'Treatment Technique Violation',
+    PopulationServedCount: 500,
+  },
+];
+
+describe('parseEchoSystems', () => {
+  it('keeps only systems with violations and grades by severity', () => {
+    const out = parseEchoSystems(ECHO_FIXTURE);
+    const dover = out.find(s => s.name === 'CITY OF DOVER');
+    const smyrna = out.find(s => s.name === 'SMYRNA WATER DEPT');
+    expect(dover).toBeDefined();
+    expect(dover!.status).toBe('Poor');
+    expect(dover!.color).toBe('#FF1744');
+    expect(dover!.source).toBe('EPA');
+    expect(smyrna).toBeDefined();
+    expect(smyrna!.status).toBe('Moderate');
+    expect(smyrna!.color).toBe('#FFD700');
+  });
+
+  it('drops systems with no violations (VioFlag=0)', () => {
+    const out = parseEchoSystems(ECHO_FIXTURE);
+    expect(out.find(s => s.name === 'CLEAN SYSTEM')).toBeUndefined();
+  });
+
+  it('drops systems whose county FIPS is not in the lookup table', () => {
+    const out = parseEchoSystems(ECHO_FIXTURE);
+    expect(out.find(s => s.name === 'NO COUNTY SYSTEM')).toBeUndefined();
+  });
+
+  it('uses DfrUrl for the report link', () => {
+    const out = parseEchoSystems(ECHO_FIXTURE);
+    const dover = out.find(s => s.name === 'CITY OF DOVER');
+    expect(dover!.url).toContain('echo.epa.gov');
+  });
+
+  it('returns empty array on non-array input', () => {
+    expect(parseEchoSystems(null)).toEqual([]);
+    expect(parseEchoSystems(undefined)).toEqual([]);
+    expect(parseEchoSystems([])).toEqual([]);
   });
 });
