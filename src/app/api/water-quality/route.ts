@@ -17,6 +17,7 @@ const USGS_PARAMS = '00010,00300,00400,00095,63680,99133';
 const HUCS = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21'];
 const MAX_STATIONS = 1500;
 const TTL_MS: Record<string, number> = { ambient: 10 * 60 * 1000, drinking: 12 * 60 * 60 * 1000 };
+const EMPTY_TTL_MS = 5 * 60 * 1000; // short TTL for empty results — avoids poisoning the long drinking/ambient TTL
 
 const cache: Record<string, { ts: number; stations: WaterStation[] }> = {};
 
@@ -42,7 +43,8 @@ async function fetchAmbient(): Promise<WaterStation[]> {
 // Fetch all PWS for one state from ECHO SDW API; returns WaterStation[] (violating only).
 async function fetchEchoState(state: string): Promise<WaterStation[]> {
   const base = 'https://echodata.epa.gov/echo';
-  const signal = AbortSignal.timeout(15000);
+  // 30s budget covers: get_systems round-trip + multi-MB get_qid body download under 51-way contention
+  const signal = AbortSignal.timeout(30000);
 
   // Step 1: get_systems → QueryID
   const sysRes = await fetch(
@@ -90,7 +92,8 @@ export async function GET(request: Request) {
   try {
     const now = Date.now();
     const cached = cache[source];
-    if (cached && now - cached.ts < TTL_MS[source]) {
+    const effectiveTTL = cached?.stations.length === 0 ? EMPTY_TTL_MS : TTL_MS[source];
+    if (cached && now - cached.ts < effectiveTTL) {
       return NextResponse.json({
         source,
         total: cached.stations.length,
