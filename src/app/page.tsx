@@ -4,6 +4,7 @@ import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Layers, BarChart3, Newspaper, Search, X, Globe, MapPinned, Radar, Satellite, Moon, ExternalLink, AlertTriangle, Activity, Database, Wifi, Play, Network } from 'lucide-react';
+import { normalizeAirStations } from '@/lib/water-sources';
 import IntelFeed from '@/components/IntelFeed';
 import MarketsPanel from '@/components/MarketsPanel';
 import ScmPanel from '@/components/ScmPanel';
@@ -153,6 +154,9 @@ export default function Dashboard() {
     sdk_naval: true,
     
     malware: false,
+    water_ambient: false,
+    air_quality: false,
+    water_drinking: false,
   });
   const [liveFeedUrl, setLiveFeedUrl] = useState<string | null>(null);
   const [liveFeedName, setLiveFeedName] = useState('');
@@ -437,6 +441,21 @@ export default function Dashboard() {
       layerFetchedRef.current.add('malware');
     }
 
+    // Ambient water (USGS)
+    if (activeLayers.water_ambient && !layerFetchedRef.current.has('water_ambient')) {
+      fetchEndpoint('/api/water-quality?source=ambient', d => ({ water_ambient: d.stations }));
+      layerFetchedRef.current.add('water_ambient');
+    }
+    // Air quality (OpenAQ — existing route, normalized)
+    if (activeLayers.air_quality && !layerFetchedRef.current.has('air_quality')) {
+      fetchEndpoint('/api/air-quality', d => ({ air_quality: normalizeAirStations(d.stations) }));
+      layerFetchedRef.current.add('air_quality');
+    }
+    // Drinking water (EPA ECHO)
+    if (activeLayers.water_drinking && !layerFetchedRef.current.has('water_drinking')) {
+      fetchEndpoint('/api/water-quality?source=drinking', d => ({ water_drinking: d.stations }));
+      layerFetchedRef.current.add('water_drinking');
+    }
 
   }, [activeLayers]);
 

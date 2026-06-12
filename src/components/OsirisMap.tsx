@@ -181,7 +181,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       createDot(map, 'dot-fire', isGhost ? phantomPurple : '#E65100', 10);
       createDot(map, 'dot-cctv', cameraColor, 10);
 
-      const sources = ['flights','military','jets','private-fl','satellites','earthquakes','gdelt','gps-jamming','day-night','cctv','fires','weather','infrastructure','maritime','maritime-choke','maritime-ships','live-news','sigint-news','conflict-zones', 'war-alerts-targets', 'war-alerts-lines', 'balloons', 'radiation', 'ip-sweep-devices', 'ip-sweep-pulse', 'ip-sweep-connections', 'scan-targets', 'sdk-entities', 'sdk-links', 'malware-nodes', 'network-mesh'];
+      const sources = ['flights','military','jets','private-fl','satellites','earthquakes','gdelt','gps-jamming','day-night','cctv','fires','weather','infrastructure','maritime','maritime-choke','maritime-ships','live-news','sigint-news','conflict-zones', 'war-alerts-targets', 'war-alerts-lines', 'balloons', 'radiation', 'ip-sweep-devices', 'ip-sweep-pulse', 'ip-sweep-connections', 'scan-targets', 'sdk-entities', 'sdk-links', 'malware-nodes', 'network-mesh', 'water-ambient', 'water-drinking', 'air-quality'];
       sources.forEach(s => map.addSource(s, { type: 'geojson', data: EMPTY_FC }));
 
       // Warning icon generator (parameterized — eliminates 3x copy-paste)
@@ -561,6 +561,27 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
         'text-offset': [0, 1.2], 'text-allow-overlap': false,
       }, paint: { 'text-color': ['match', ['get','type'], 'military','#D32F2F', 'tanker','#E65100', 'cargo','#26C6DA', '#B0BEC5'], 'text-halo-color': '#000', 'text-halo-width': 1 }});
 
+      // ── Water Quality + Air Quality (ENVIRONMENT) ──
+      ['water-ambient', 'water-drinking', 'air-quality'].forEach(src => {
+        map.addLayer({ id: `${src}-glow`, type: 'circle', source: src, paint: {
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 1, 6, 5, 14, 10, 22],
+          'circle-color': ['get', 'color'],
+          'circle-opacity': 0.12,
+          'circle-blur': 1,
+        }});
+        map.addLayer({ id: `${src}-dots`, type: 'circle', source: src, paint: {
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 1, 2.5, 5, 4.5, 10, 7],
+          'circle-color': ['get', 'color'],
+          'circle-opacity': 0.85,
+          'circle-stroke-width': 0.5,
+          'circle-stroke-color': '#00121a',
+        }});
+        map.addLayer({ id: `${src}-label`, type: 'symbol', source: src, minzoom: 6, layout: {
+          'text-field': ['get', 'name'], 'text-size': 9, 'text-font': ['Open Sans Regular'],
+          'text-offset': [0, 1.2], 'text-allow-overlap': false,
+        }, paint: { 'text-color': ['get', 'color'], 'text-halo-color': '#000', 'text-halo-width': 1 }});
+      });
+
       setMapReady(true);
     });
 
@@ -614,6 +635,31 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       });
       map.on('mouseenter', layer, () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', layer, () => { map.getCanvas().style.cursor = ''; });
+    });
+
+    // ── Water / Air station popups ──
+    ['water-ambient-dots', 'water-drinking-dots', 'air-quality-dots'].forEach(layer => {
+      map.on('click', layer, e => {
+        if (!e.features?.length) return;
+        const p = e.features[0].properties as any;
+        const coords = (e.features[0].geometry as any).coordinates;
+        let params: Record<string, any> = {};
+        try { params = p.params ? (typeof p.params === 'string' ? JSON.parse(p.params) : p.params) : {}; } catch { params = {}; }
+        const rows = Object.entries(params)
+          .filter(([, v]) => v !== undefined && v !== null && v !== '')
+          .map(([k, v]) => `<div><span style="color:#5C5A54;font-size:9px;">${k.toUpperCase()}</span><br/><span style="color:#E8E6E0;">${v}</span></div>`)
+          .join('');
+        popup(coords, `<div style="${pStyle}border:1px solid ${p.color}55;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:10px;">
+            <span style="color:${p.color};font-size:14px;font-weight:700;">${p.name || 'Station'}</span>
+            <span style="color:${p.color};font-size:10px;border:1px solid ${p.color}55;border-radius:4px;padding:2px 6px;white-space:nowrap;">${p.status || ''}</span>
+          </div>
+          <div style="color:#9A988F;font-size:10px;margin-bottom:8px;">${p.reason || ''}</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:11px;">${rows}</div>
+          ${p.source === 'EPA' ? `<div style="color:#7a786f;font-size:9px;margin-top:8px;">⚠ Location approximate (utility service area)</div>` : ''}
+          ${p.url ? `<a href="${p.url}" target="_blank" style="${linkStyle}color:${p.color};border:1px solid ${p.color}55;background:${p.color}1a;">VIEW SOURCE →</a>` : ''}
+        </div>`);
+      });
     });
 
     // ── CCTV (opens CameraViewer panel) ──
@@ -792,7 +838,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
     });
 
     // ── Generic hover for clickables ──
-    ['conflict-icons','cctv-dots','eq-circles','sat-dots','fires-heat','gdelt-dots','weather-dots','infra-dots','maritime-dots','choke-dots','news-dots','sigint-news-dots','balloon-dots','rad-dots','ship-dots','sweep-device-dots','scan-targets-dots','sdk-sea','sdk-sea-glow','sdk-sea-atmo','sdk-air','sdk-air-glow','sdk-air-atmo','sdk-intel','sdk-intel-glow','sdk-intel-atmo','malware-dots'].forEach(layer => {
+    ['conflict-icons','cctv-dots','eq-circles','sat-dots','fires-heat','gdelt-dots','weather-dots','infra-dots','maritime-dots','choke-dots','news-dots','sigint-news-dots','balloon-dots','rad-dots','ship-dots','sweep-device-dots','scan-targets-dots','sdk-sea','sdk-sea-glow','sdk-sea-atmo','sdk-air','sdk-air-glow','sdk-air-atmo','sdk-intel','sdk-intel-glow','sdk-intel-atmo','malware-dots','water-ambient-dots','water-drinking-dots','air-quality-dots'].forEach(layer => {
       map.on('mouseenter', layer, () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', layer, () => { map.getCanvas().style.cursor = ''; });
     });
@@ -1115,6 +1161,24 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
     setGeo('earthquakes', activeLayers.earthquakes && data.earthquakes ? data.earthquakes.map((eq: any) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [eq.lng, eq.lat] }, properties: { magnitude: eq.magnitude, place: eq.place } })) : []);
   }, [mapReady, data.earthquakes, activeLayers.earthquakes, setGeo]);
 
+  // ── Water Quality + Air Quality station sync ──
+  useEffect(() => {
+    if (!mapReady) return;
+    const toFeatures = (arr: any[], on: boolean) =>
+      on && Array.isArray(arr)
+        ? arr
+            .filter((s: any) => Number.isFinite(s.lat) && Number.isFinite(s.lng))
+            .map((s: any) => ({
+              type: 'Feature' as const,
+              geometry: { type: 'Point' as const, coordinates: [s.lng, s.lat] },
+              properties: { name: s.name, color: s.color, status: s.status, reason: s.reason, source: s.source, url: s.url, params: s.params },
+            }))
+        : [];
+    setGeo('water-ambient', toFeatures(data.water_ambient, activeLayers.water_ambient));
+    setGeo('water-drinking', toFeatures(data.water_drinking, activeLayers.water_drinking));
+    setGeo('air-quality', toFeatures(data.air_quality, activeLayers.air_quality));
+  }, [mapReady, data.water_ambient, data.water_drinking, data.air_quality, activeLayers.water_ambient, activeLayers.water_drinking, activeLayers.air_quality, setGeo]);
+
   useEffect(() => {
     if (!mapReady) return;
     setGeo('satellites', activeLayers.satellites && data.satellites ? data.satellites.map((s: any) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [s.lng, s.lat] }, properties: { name: s.name, color: s.color, mission: s.mission, alt: s.alt, noradId: s.noradId } })) : []);
@@ -1300,6 +1364,9 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
     setVis(['fl-military'], activeLayers.military);
     setVis(['cctv-glow','cctv-dots','cctv-label'], activeLayers.cctv);
     setVis(['fires-heat'], activeLayers.fires);
+    setVis(['water-ambient-glow', 'water-ambient-dots', 'water-ambient-label'], activeLayers.water_ambient);
+    setVis(['water-drinking-glow', 'water-drinking-dots', 'water-drinking-label'], activeLayers.water_drinking);
+    setVis(['air-quality-glow', 'air-quality-dots', 'air-quality-label'], activeLayers.air_quality);
     setVis(['weather-glow','weather-dots','weather-label'], activeLayers.weather);
     setVis(['infra-glow','infra-dots','infra-label'], activeLayers.infrastructure);
     setVis(['maritime-glow','maritime-dots','maritime-label'], activeLayers.maritime);
