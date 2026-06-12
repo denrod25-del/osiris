@@ -604,6 +604,18 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
     };
     const pStyle = `background:rgba(12,14,26,0.95);backdrop-filter:blur(16px);border-radius:10px;padding:16px;font-family:'JetBrains Mono',monospace;`;
     const linkStyle = `display:inline-block;margin-top:8px;padding:5px 12px;font-size:10px;letter-spacing:0.12em;text-decoration:none;border-radius:5px;font-family:'JetBrains Mono',monospace;`;
+    const esc = (v: any) => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c] as string));
+    const relTime = (raw: any): string => {
+      if (!raw) return '';
+      const d = new Date(raw);
+      if (isNaN(d.getTime())) return String(raw);
+      const mins = Math.round((Date.now() - d.getTime()) / 60000);
+      if (mins < 1) return 'updated just now';
+      if (mins < 60) return `updated ${mins} min ago`;
+      const hrs = Math.round(mins / 60);
+      if (hrs < 24) return `updated ${hrs}h ago`;
+      return `updated ${Math.round(hrs / 24)}d ago`;
+    };
 
     // ── Flights (with FlightAware + ADS-B Exchange links) ──
     ['fl-commercial','fl-private','fl-jets','fl-military'].forEach(layer => {
@@ -647,18 +659,86 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
         try { params = p.params ? (typeof p.params === 'string' ? JSON.parse(p.params) : p.params) : {}; } catch { params = {}; }
         const rows = Object.entries(params)
           .filter(([, v]) => v !== undefined && v !== null && v !== '')
-          .map(([k, v]) => `<div><span style="color:#5C5A54;font-size:9px;">${k.toUpperCase()}</span><br/><span style="color:#E8E6E0;">${v}</span></div>`)
+          .map(([k, v]) => `<div><span style="color:#5C5A54;font-size:9px;">${esc(k).toUpperCase()}</span><br/><span style="color:#E8E6E0;">${esc(v)}</span></div>`)
           .join('');
+        const updatedStr = relTime(p.lastUpdated);
+        const safeUrl = typeof p.url === 'string' && p.url.startsWith('https://') ? p.url : null;
+
+        // I9 — EWG crosswalk (drinking only)
+        let ewgLink = '';
+        if (layer === 'water-drinking-dots' && typeof p.id === 'string' && p.id.startsWith('epa-')) {
+          const pwsid = p.id.slice(4);
+          if (pwsid) ewgLink = `<a href="https://www.ewg.org/tapwater/system.php?pws=${encodeURIComponent(pwsid)}" target="_blank" style="${linkStyle}color:${p.color};border:1px solid ${p.color}55;background:${p.color}1a;">EWG REPORT →</a>`;
+        }
+
         popup(coords, `<div style="${pStyle}border:1px solid ${p.color}55;">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:10px;">
-            <span style="color:${p.color};font-size:14px;font-weight:700;">${p.name || 'Station'}</span>
-            <span style="color:${p.color};font-size:10px;border:1px solid ${p.color}55;border-radius:4px;padding:2px 6px;white-space:nowrap;">${p.status || ''}</span>
+            <span style="color:${p.color};font-size:14px;font-weight:700;">${esc(p.name) || 'Station'}</span>
+            <span style="color:${p.color};font-size:10px;border:1px solid ${p.color}55;border-radius:4px;padding:2px 6px;white-space:nowrap;">${esc(p.status) || ''}</span>
           </div>
-          <div style="color:#9A988F;font-size:10px;margin-bottom:8px;">${p.reason || ''}</div>
+          <div style="color:#9A988F;font-size:10px;margin-bottom:8px;">${esc(p.reason) || ''}</div>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:11px;">${rows}</div>
+          ${updatedStr ? `<div style="color:#5C5A54;font-size:9px;margin-top:6px;">${esc(updatedStr)}</div>` : ''}
           ${p.source === 'EPA' ? `<div style="color:#7a786f;font-size:9px;margin-top:8px;">⚠ Location approximate (utility service area)</div>` : ''}
-          ${p.url ? `<a href="${p.url}" target="_blank" style="${linkStyle}color:${p.color};border:1px solid ${p.color}55;background:${p.color}1a;">VIEW SOURCE →</a>` : ''}
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            ${safeUrl ? `<a href="${safeUrl}" target="_blank" style="${linkStyle}color:${p.color};border:1px solid ${p.color}55;background:${p.color}1a;">VIEW SOURCE →</a>` : ''}
+            ${ewgLink}
+          </div>
+          ${layer === 'water-ambient-dots' ? `<div id="wq-spark" style="margin-top:8px;min-height:0;"></div>` : ''}
         </div>`);
+
+        // I5 — 7-day USGS sparkline (ambient only)
+        if (layer === 'water-ambient-dots' && typeof p.id === 'string' && p.id.startsWith('usgs-')) {
+          const siteId = p.id.slice(5);
+          const sparkColor = p.color || '#00E5FF';
+          (async () => {
+            try {
+              const res = await fetch(
+                `https://waterservices.usgs.gov/nwis/iv/?format=json&sites=${encodeURIComponent(siteId)}&period=P7D&parameterCd=00300,00400,63680,99133`,
+                { signal: AbortSignal.timeout(8000) }
+              );
+              if (!res.ok) return;
+              const json = await res.json();
+              const series: any[] = json?.value?.timeSeries ?? [];
+              // Prefer 00300 (DO), then 00400 (pH), then 63680 (turbidity), then 99133 (nitrate)
+              const preferred = ['00300','00400','63680','99133'];
+              let chosen: any = null;
+              for (const cd of preferred) {
+                chosen = series.find((ts: any) => ts.variable?.variableCode?.[0]?.value === cd);
+                if (chosen) break;
+              }
+              if (!chosen) chosen = series[0];
+              if (!chosen) return;
+              const rawVals: {value: string; dateTime: string}[] = chosen.values?.[0]?.value ?? [];
+              const pts = rawVals
+                .map((v: any) => ({ t: new Date(v.dateTime).getTime(), y: parseFloat(v.value) }))
+                .filter(v => isFinite(v.t) && isFinite(v.y) && v.y !== -999999);
+              if (pts.length < 2) return;
+              // Guard: popup may have been closed/replaced
+              const sparkEl = document.getElementById('wq-spark');
+              if (!sparkEl) return;
+              const unitCode = chosen.variable?.unit?.unitCode ?? '';
+              const varName = chosen.variable?.variableName ?? 'Reading';
+              const label = `7-day ${varName}${unitCode ? ' (' + unitCode + ')' : ''}`;
+              const W = 220, H = 40, PAD = 2;
+              const minY = Math.min(...pts.map(v => v.y));
+              const maxY = Math.max(...pts.map(v => v.y));
+              const rangeY = maxY - minY || 1;
+              const minT = pts[0].t, maxT = pts[pts.length - 1].t;
+              const rangeT = maxT - minT || 1;
+              const toX = (t: number) => PAD + ((t - minT) / rangeT) * (W - PAD * 2);
+              const toY = (y: number) => (H - PAD) - ((y - minY) / rangeY) * (H - PAD * 2);
+              const d = pts.map((v, i) => `${i === 0 ? 'M' : 'L'}${toX(v.t).toFixed(1)},${toY(v.y).toFixed(1)}`).join(' ');
+              sparkEl.innerHTML = `
+                <div style="font-size:8px;color:#5C5A54;margin-bottom:2px;">${esc(label)}</div>
+                <svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="display:block;overflow:visible;">
+                  <path d="${d}" fill="none" stroke="${sparkColor}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>`;
+            } catch {
+              // fetch failed or aborted — do nothing
+            }
+          })();
+        }
       });
     });
 
@@ -1171,7 +1251,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
             .map((s: any) => ({
               type: 'Feature' as const,
               geometry: { type: 'Point' as const, coordinates: [s.lng, s.lat] },
-              properties: { name: s.name, color: s.color, status: s.status, reason: s.reason, source: s.source, url: s.url, params: s.params },
+              properties: { name: s.name, color: s.color, status: s.status, reason: s.reason, source: s.source, url: s.url, params: s.params, id: s.id, lastUpdated: s.lastUpdated },
             }))
         : [];
     setGeo('water-ambient', toFeatures(data.water_ambient, activeLayers.water_ambient));
