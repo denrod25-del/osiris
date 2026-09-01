@@ -40353,7 +40353,7 @@
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=IN2350026"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110072250705"
   },
   {
     "id": "epa-IN2570915",
@@ -80478,24 +80478,6 @@
     "url": "https://echo.epa.gov/detailed-facility-report?fid=110012966772"
   },
   {
-    "id": "epa-MO5190928",
-    "source": "EPA",
-    "name": "BUDGET INN",
-    "lat": 36.897800000000004,
-    "lng": -94.36869999999999,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Maximum Contaminant Level Violation | Monitoring and Reporting | Other Violation",
-    "params": {
-      "populationServed": 40,
-      "violationCategories": "Maximum Contaminant Level Violation | Monitoring and Reporting | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050756669"
-  },
-  {
     "id": "epa-MO3190887",
     "source": "EPA",
     "name": "BUDGET INN",
@@ -80512,6 +80494,24 @@
     },
     "lastUpdated": null,
     "url": "https://echo.epa.gov/detailed-facility-report?fid=110052952612"
+  },
+  {
+    "id": "epa-MO5190928",
+    "source": "EPA",
+    "name": "BUDGET INN",
+    "lat": 36.897800000000004,
+    "lng": -94.36869999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Maximum Contaminant Level Violation | Monitoring and Reporting | Other Violation",
+    "params": {
+      "populationServed": 40,
+      "violationCategories": "Maximum Contaminant Level Violation | Monitoring and Reporting | Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050756669"
   },
   {
     "id": "epa-MO5272955",
@@ -105804,1649 +105804,173 @@
     "url": "https://echo.epa.gov/detailed-facility-report?fid=110049432770"
   },
   {
-    "id": "epa-NC0197555",
+    "id": "epa-ND5311738",
     "source": "EPA",
-    "name": "115 GAS AND GRILL",
-    "lat": 36.1654,
-    "lng": -81.2009,
+    "name": "13 MILE CENTER",
+    "lat": 48.3522,
+    "lng": -103.5496,
     "status": "Moderate",
     "color": "#FFD700",
-    "reason": "Monitoring Violation | Other Violation",
-    "params": {
-      "populationServed": 0,
-      "violationCategories": "Monitoring Violation | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051042251"
-  },
-  {
-    "id": "epa-NC0326955",
-    "source": "EPA",
-    "name": "210 MINI MART",
-    "lat": 35.07749999999999,
-    "lng": -78.7991,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation | Reporting Violation",
+    "reason": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
     "params": {
       "populationServed": 50,
-      "violationCategories": "Other Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051080423"
-  },
-  {
-    "id": "epa-NC0217420",
-    "source": "EPA",
-    "name": "3 POINTS GROCERY & GRILL  NO 2",
-    "lat": 36.443200000000004,
-    "lng": -79.3108,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Other Violation",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Monitoring Violation | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050800969"
-  },
-  {
-    "id": "epa-NC0279766",
-    "source": "EPA",
-    "name": "3 SISTERS CAFE",
-    "lat": 36.4028,
-    "lng": -79.8089,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 0,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051056735"
-  },
-  {
-    "id": "epa-NC0347102",
-    "source": "EPA",
-    "name": "401 MOBILE HOME PARK",
-    "lat": 35.043200000000006,
-    "lng": -79.2831,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation",
-    "params": {
-      "populationServed": 75,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation",
+      "violationCategories": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
       "healthFlag": "No",
       "mrFlag": "Yes"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012864766"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110063345036"
   },
   {
-    "id": "epa-NC0111510",
+    "id": "epa-ND3900001",
     "source": "EPA",
-    "name": "530 UPPERFLAT CREEK RD #2",
-    "lat": 35.5616,
-    "lng": -82.5253,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation",
-    "params": {
-      "populationServed": 1,
-      "violationCategories": "Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050481554"
-  },
-  {
-    "id": "epa-NC0100474",
-    "source": "EPA",
-    "name": "57 PLEASANT VALLEY RD",
-    "lat": 35.9332,
-    "lng": -82.3322,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 10,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052898771"
-  },
-  {
-    "id": "epa-NC1022007",
-    "source": "EPA",
-    "name": "64 EAST APARTMENTS",
-    "lat": 35.006499999999996,
-    "lng": -83.7749,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 50,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110072079169"
-  },
-  {
-    "id": "epa-NC2080074",
-    "source": "EPA",
-    "name": "7 ELEVEN STORE 35553",
-    "lat": 35.609199999999994,
-    "lng": -80.5146,
+    "name": "ABERCROMBIE CITY OF",
+    "lat": 46.231700000000004,
+    "lng": -96.9668,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation | Monitoring and Reporting | Reporting Violation",
     "params": {
-      "populationServed": 25,
+      "populationServed": 263,
       "violationCategories": "Monitoring Violation | Monitoring and Reporting | Reporting Violation",
       "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110063331372"
-  },
-  {
-    "id": "epa-NC0347483",
-    "source": "EPA",
-    "name": "82ND ABN DIV PRE RANGER FACILTY",
-    "lat": 35.056400000000004,
-    "lng": -79.2779,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 50,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110017421501"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012904777"
   },
   {
-    "id": "epa-NC7071044",
+    "id": "epa-ND1801056",
     "source": "EPA",
-    "name": "A B FOODMART",
-    "lat": 34.509,
-    "lng": -77.8428,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 100,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050647564"
-  },
-  {
-    "id": "epa-NC0347482",
-    "source": "EPA",
-    "name": "ABERDEEN TRAINING FACILITY",
-    "lat": 35.0563,
-    "lng": -79.2782,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Other Violation | Reporting Violation",
-    "params": {
-      "populationServed": 75,
-      "violationCategories": "Monitoring Violation | Other Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110027396351"
-  },
-  {
-    "id": "epa-NC0149600",
-    "source": "EPA",
-    "name": "ABUNDANT LIFE FOUR SQUARE CHURCH",
-    "lat": 35.8406,
-    "lng": -80.8835,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 100,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110053036200"
-  },
-  {
-    "id": "epa-NC1045041",
-    "source": "EPA",
-    "name": "ACONY BELL COMMUNITY",
-    "lat": 35.343199999999996,
-    "lng": -82.5023,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation",
-    "params": {
-      "populationServed": 82,
-      "violationCategories": "Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110070782145"
-  },
-  {
-    "id": "epa-NC0351120",
-    "source": "EPA",
-    "name": "ADAMS MHP",
-    "lat": 35.5229,
-    "lng": -78.3731,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation",
-    "params": {
-      "populationServed": 80,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110010708653"
-  },
-  {
-    "id": "epa-NC0122405",
-    "source": "EPA",
-    "name": "ADVANCED DIGITAL CABLE",
-    "lat": 35.037699999999994,
-    "lng": -83.7213,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Other Violation | Reporting Violation",
-    "params": {
-      "populationServed": 75,
-      "violationCategories": "Monitoring Violation | Other Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052877295"
-  },
-  {
-    "id": "epa-NC5326400",
-    "source": "EPA",
-    "name": "AFFORDABLE DENTURES",
-    "lat": 35.091899999999995,
-    "lng": -78.7959,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 50,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050931612"
-  },
-  {
-    "id": "epa-NC4392445",
-    "source": "EPA",
-    "name": "AJ`S FOOD MART",
-    "lat": 35.8246,
-    "lng": -78.6245,
+    "name": "AGASSIZ WATER USERS DISTRICT",
+    "lat": 47.9363,
+    "lng": -97.40950000000001,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring and Reporting",
     "params": {
-      "populationServed": 100,
+      "populationServed": 3438,
       "violationCategories": "Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "Yes"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050861803"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903714"
   },
   {
-    "id": "epa-NC3001025",
+    "id": "epa-ND3000012",
     "source": "EPA",
-    "name": "ALAMANCE BATTLEGROUND VISITOR'S CENTER",
-    "lat": 36.026799999999994,
-    "lng": -79.4449,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Reporting Violation",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Monitoring and Reporting | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110071196766"
-  },
-  {
-    "id": "epa-NC0136102",
-    "source": "EPA",
-    "name": "ALAN ACRES",
-    "lat": 35.2574,
-    "lng": -81.1311,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 366,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012928528"
-  },
-  {
-    "id": "epa-NC0351194",
-    "source": "EPA",
-    "name": "ALBANY ACRES S/D",
-    "lat": 35.544999999999995,
-    "lng": -78.3828,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 81,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012862599"
-  },
-  {
-    "id": "epa-NC0326810",
-    "source": "EPA",
-    "name": "ALDERMAN ROAD ELEMENTARY",
-    "lat": 35.0685,
-    "lng": -78.8081,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation",
-    "params": {
-      "populationServed": 610,
-      "violationCategories": "Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050920063"
-  },
-  {
-    "id": "epa-NC0102020",
-    "source": "EPA",
-    "name": "ALEXANDER CO WTR DIST",
-    "lat": 35.9228,
-    "lng": -81.17,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 13064,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012944920"
-  },
-  {
-    "id": "epa-NC0197552",
-    "source": "EPA",
-    "name": "ALEXE'S GRILL AND ICE CREAM",
-    "lat": 36.1651,
-    "lng": -81.1866,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Reporting Violation",
-    "params": {
-      "populationServed": 0,
-      "violationCategories": "Monitoring Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050819254"
-  },
-  {
-    "id": "epa-NC0145506",
-    "source": "EPA",
-    "name": "ALL SAINTS ANGLICAN CHURCH",
-    "lat": 35.358799999999995,
-    "lng": -82.4419,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 0,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052872726"
-  },
-  {
-    "id": "epa-NC0392102",
-    "source": "EPA",
-    "name": "ALL STAR MHP",
-    "lat": 35.7808,
-    "lng": -78.6155,
-    "status": "Poor",
-    "color": "#FF1744",
-    "reason": "Maximum Contaminant Level Violation",
-    "params": {
-      "populationServed": 530,
-      "violationCategories": "Maximum Contaminant Level Violation",
-      "healthFlag": "Yes",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012857471"
-  },
-  {
-    "id": "epa-NC0235415",
-    "source": "EPA",
-    "name": "ALLEN CHAPEL BAPTIST CHURCH",
-    "lat": 36.0805,
-    "lng": -78.3013,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 125,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050801183"
-  },
-  {
-    "id": "epa-NC2036009",
-    "source": "EPA",
-    "name": "ALLEN FISHING AREA",
-    "lat": 35.2535,
-    "lng": -81.17840000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 0,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050931970"
-  },
-  {
-    "id": "epa-NC0136103",
-    "source": "EPA",
-    "name": "ALLEN MHP LLC",
-    "lat": 35.2575,
-    "lng": -81.1312,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 64,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012928573"
-  },
-  {
-    "id": "epa-NC0286144",
-    "source": "EPA",
-    "name": "ALLEN WOODS VILLAGE",
-    "lat": 36.3682,
-    "lng": -80.716,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 81,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012873989"
-  },
-  {
-    "id": "epa-NC0276207",
-    "source": "EPA",
-    "name": "ALLENDALE HEIGHTS",
-    "lat": 35.694599999999994,
-    "lng": -79.85040000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 78,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012875558"
-  },
-  {
-    "id": "epa-NC0489402",
-    "source": "EPA",
-    "name": "ALLIGATOR RIVER MARINA",
-    "lat": 35.8664,
-    "lng": -76.162,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 100,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110018744536"
-  },
-  {
-    "id": "epa-NC0187556",
-    "source": "EPA",
-    "name": "ALMOND BOAT PARK & RV",
-    "lat": 35.5733,
-    "lng": -83.506,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 64,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052784830"
-  },
-  {
-    "id": "epa-NC0319489",
-    "source": "EPA",
-    "name": "ALSTON CHAPEL UNITED HOLY CHURCH",
-    "lat": 35.7467,
-    "lng": -79.2427,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 175,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110049187116"
-  },
-  {
-    "id": "epa-NC0106404",
-    "source": "EPA",
-    "name": "ALTAMONT METHODIST CHURCH",
-    "lat": 36.0689,
-    "lng": -81.9674,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 50,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050766417"
-  },
-  {
-    "id": "epa-NC0392323",
-    "source": "EPA",
-    "name": "ALTICE ESTATES S/D",
-    "lat": 35.7793,
-    "lng": -78.6268,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 330,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012853803"
-  },
-  {
-    "id": "epa-NC3086035",
-    "source": "EPA",
-    "name": "AMAZING GRACE BAPTIST CHURCH",
-    "lat": 36.413599999999995,
-    "lng": -80.6826,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050857346"
-  },
-  {
-    "id": "epa-NC0392236",
-    "source": "EPA",
-    "name": "AMBER ACRES",
-    "lat": 35.7866,
-    "lng": -78.6161,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Other Violation",
-    "params": {
-      "populationServed": 239,
-      "violationCategories": "Monitoring and Reporting | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012915024"
-  },
-  {
-    "id": "epa-NC0392346",
-    "source": "EPA",
-    "name": "AMBER ACRES NORTH S/D",
-    "lat": 35.7858,
-    "lng": -78.6201,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Maximum Contaminant Level Violation",
-    "params": {
-      "populationServed": 752,
-      "violationCategories": "Maximum Contaminant Level Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012852261"
-  },
-  {
-    "id": "epa-NC1081031",
-    "source": "EPA",
-    "name": "AMERICAN MISO COMPANY, INC",
-    "lat": 35.3984,
-    "lng": -81.9216,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 38,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110072078743"
-  },
-  {
-    "id": "epa-NC0136339",
-    "source": "EPA",
-    "name": "AMY ACRES S/D",
-    "lat": 35.2596,
-    "lng": -81.1337,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 490,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012922613"
-  },
-  {
-    "id": "epa-NC0465210",
-    "source": "EPA",
-    "name": "ANCHORS BEND MARINA",
-    "lat": 34.1695,
-    "lng": -77.8502,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 75,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050789740"
-  },
-  {
-    "id": "epa-NC0201631",
-    "source": "EPA",
-    "name": "ANDERSEN ENERGY INC",
-    "lat": 36.0616,
-    "lng": -79.4429,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 80,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050659177"
-  },
-  {
-    "id": "epa-NC4064003",
-    "source": "EPA",
-    "name": "ANDREW TYSON FARMS MLC",
-    "lat": 35.9603,
-    "lng": -77.9667,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation",
-    "params": {
-      "populationServed": 68,
-      "violationCategories": "Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050852975"
-  },
-  {
-    "id": "epa-NC0343015",
-    "source": "EPA",
-    "name": "ANGIER, TOWN OF",
-    "lat": 35.3856,
-    "lng": -78.87650000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 13302,
-      "violationCategories": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012864105"
-  },
-  {
-    "id": "epa-NC0304010",
-    "source": "EPA",
-    "name": "ANSON COUNTY WATER SYSTEM",
-    "lat": 34.9621,
-    "lng": -80.1036,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 13880,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012872169"
-  },
-  {
-    "id": "epa-NC0304012",
-    "source": "EPA",
-    "name": "ANSONVILLE WATER SYSTEM",
-    "lat": 34.9623,
-    "lng": -80.10340000000001,
+    "name": "ALMONT CITY OF",
+    "lat": 46.7438,
+    "lng": -101.2777,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation",
     "params": {
-      "populationServed": 1262,
+      "populationServed": 122,
       "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation",
       "healthFlag": "No",
       "mrFlag": "Yes"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012919716"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012904223"
   },
   {
-    "id": "epa-NC0144528",
+    "id": "epa-ND5311709",
     "source": "EPA",
-    "name": "ANTIOCH BAPTIST CHURCH",
-    "lat": 35.6086,
-    "lng": -83.0293,
+    "name": "B & B RV",
+    "lat": 48.343,
+    "lng": -103.4524,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation",
     "params": {
-      "populationServed": 350,
+      "populationServed": 25,
       "violationCategories": "Monitoring Violation",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050507215"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110063364924"
   },
   {
-    "id": "epa-NC0424777",
+    "id": "epa-ND1700059",
     "source": "EPA",
-    "name": "ANTIOCH BAPTIST CHURCH",
-    "lat": 34.26,
-    "lng": -78.68400000000001,
+    "name": "BEACH CITY OF",
+    "lat": 46.955299999999994,
+    "lng": -103.8465,
     "status": "Moderate",
     "color": "#FFD700",
-    "reason": "Monitoring Violation",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
     "params": {
-      "populationServed": 100,
-      "violationCategories": "Monitoring Violation",
+      "populationServed": 981,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050775443"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903590"
   },
   {
-    "id": "epa-NC0180634",
+    "id": "epa-ND4500065",
     "source": "EPA",
-    "name": "ANTIOCH BAPTIST CHURCH",
-    "lat": 35.6819,
-    "lng": -80.5373,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 40,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052416658"
-  },
-  {
-    "id": "epa-NC0392045",
-    "source": "EPA",
-    "name": "APEX, TOWN OF",
-    "lat": 35.797399999999996,
-    "lng": -78.6405,
+    "name": "BELFIELD CITY OF",
+    "lat": 46.8102,
+    "lng": -102.6935,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring and Reporting",
     "params": {
-      "populationServed": 83001,
+      "populationServed": 1013,
       "violationCategories": "Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012860127"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266394"
   },
   {
-    "id": "epa-NC3095005",
+    "id": "epa-ND5100072",
     "source": "EPA",
-    "name": "APPALACHIAN ADVENT CHRIST CG",
-    "lat": 36.1973,
-    "lng": -81.7257,
-    "status": "Poor",
-    "color": "#FF1744",
-    "reason": "Other Violation | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 80,
-      "violationCategories": "Other Violation | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "Yes",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050793977"
-  },
-  {
-    "id": "epa-NC0195101",
-    "source": "EPA",
-    "name": "APPALACHIAN STATE UNIV WTP",
-    "lat": 36.233399999999996,
-    "lng": -81.6862,
+    "name": "BERTHOLD CITY OF",
+    "lat": 48.1908,
+    "lng": -101.5409,
     "status": "Moderate",
     "color": "#FFD700",
-    "reason": "Maximum Contaminant Level Violation | Monitoring and Reporting",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
     "params": {
-      "populationServed": 11150,
-      "violationCategories": "Maximum Contaminant Level Violation | Monitoring and Reporting",
+      "populationServed": 454,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903313"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012901707"
   },
   {
-    "id": "epa-NC3095022",
+    "id": "epa-ND2000077",
     "source": "EPA",
-    "name": "APPALCART TRANSIT FACILITY",
-    "lat": 36.203199999999995,
-    "lng": -81.7196,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Other Violation",
-    "params": {
-      "populationServed": 80,
-      "violationCategories": "Monitoring and Reporting | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110063365807"
-  },
-  {
-    "id": "epa-NC0234179",
-    "source": "EPA",
-    "name": "APPLEGATE WATER SYSTEM",
-    "lat": 36.1764,
-    "lng": -80.2788,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 442,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012899015"
-  },
-  {
-    "id": "epa-NC3041118",
-    "source": "EPA",
-    "name": "APPLES CHAPEL CHRISTIAN DAYCARE",
-    "lat": 36.063599999999994,
-    "lng": -79.77550000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Treatment Technique Violation",
-    "params": {
-      "populationServed": 100,
-      "violationCategories": "Monitoring and Reporting | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110071195855"
-  },
-  {
-    "id": "epa-NC0157553",
-    "source": "EPA",
-    "name": "APPLETREE GROUP CAMP",
-    "lat": 35.2009,
-    "lng": -83.39729999999999,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 150,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050582650"
-  },
-  {
-    "id": "epa-NC0286159",
-    "source": "EPA",
-    "name": "ARARAT RIVER CAMPGROUND",
-    "lat": 36.3718,
-    "lng": -80.7076,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 100,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050927618"
-  },
-  {
-    "id": "epa-NC0368108",
-    "source": "EPA",
-    "name": "ARBOR HILL MHP",
-    "lat": 36.0724,
-    "lng": -79.1406,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Other Violation | Reporting Violation",
-    "params": {
-      "populationServed": 96,
-      "violationCategories": "Monitoring and Reporting | Other Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110010642992"
-  },
-  {
-    "id": "epa-NC0276030",
-    "source": "EPA",
-    "name": "ARCHDALE, CITY OF",
-    "lat": 35.711,
-    "lng": -79.7788,
+    "name": "BINFORD CITY OF",
+    "lat": 47.4411,
+    "lng": -98.27539999999999,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation",
     "params": {
-      "populationServed": 12700,
+      "populationServed": 183,
       "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012878047"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271002"
   },
   {
-    "id": "epa-NC0180681",
+    "id": "epa-ND0510048",
     "source": "EPA",
-    "name": "ARDIS CHAPEL AME ZION CHURCH",
-    "lat": 35.5971,
-    "lng": -80.5653,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 40,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050542114"
-  },
-  {
-    "id": "epa-NC0160515",
-    "source": "EPA",
-    "name": "ARLINGTON BAPTIST CHURCH INC",
-    "lat": 35.281,
-    "lng": -80.7958,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 350,
-      "violationCategories": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052790002"
-  },
-  {
-    "id": "epa-NC3041054",
-    "source": "EPA",
-    "name": "ARMFIELD S/D PHASE IA",
-    "lat": 36.079499999999996,
-    "lng": -79.80900000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 132,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110021039570"
-  },
-  {
-    "id": "epa-NC3041055",
-    "source": "EPA",
-    "name": "ARMFIELD S/D PHASE IB",
-    "lat": 36.0796,
-    "lng": -79.8091,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 86,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110022499027"
-  },
-  {
-    "id": "epa-NC0392374",
-    "source": "EPA",
-    "name": "ARROW SPRINGS",
-    "lat": 35.7949,
-    "lng": -78.6416,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 53,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012910378"
-  },
-  {
-    "id": "epa-NC0100459",
-    "source": "EPA",
-    "name": "ARTHUR MORGAN SCHOOL",
-    "lat": 35.9275,
-    "lng": -82.33930000000001,
-    "status": "Poor",
-    "color": "#FF1744",
-    "reason": "Other Violation | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 42,
-      "violationCategories": "Other Violation | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "Yes",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050538520"
-  },
-  {
-    "id": "epa-NC0105406",
-    "source": "EPA",
-    "name": "ASHE COUNTY MIDDLE SCHOOL",
-    "lat": 36.4614,
-    "lng": -81.5031,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 520,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052899565"
-  },
-  {
-    "id": "epa-NC0105414",
-    "source": "EPA",
-    "name": "ASHE COUNTY PARK",
-    "lat": 36.4643,
-    "lng": -81.5064,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052845766"
-  },
-  {
-    "id": "epa-NC3076017",
-    "source": "EPA",
-    "name": "ASHEBORO CONG JEHOVAH WITNESS",
-    "lat": 35.75,
-    "lng": -79.7566,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 150,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050908791"
-  },
-  {
-    "id": "epa-NC3076008",
-    "source": "EPA",
-    "name": "ASHEBORO COUNTRY CLUB ESTATES",
-    "lat": 35.747,
-    "lng": -79.8404,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 26,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048692205"
-  },
-  {
-    "id": "epa-NC0276414",
-    "source": "EPA",
-    "name": "ASHEBORO COUNTRY CLUB INC",
-    "lat": 35.6896,
-    "lng": -79.7586,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051250409"
-  },
-  {
-    "id": "epa-NC0276010",
-    "source": "EPA",
-    "name": "ASHEBORO, CITY OF",
-    "lat": 35.7048,
-    "lng": -79.76100000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Maximum Contaminant Level Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 27819,
-      "violationCategories": "Maximum Contaminant Level Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012877976"
-  },
-  {
-    "id": "epa-NC0136104",
-    "source": "EPA",
-    "name": "ASHEBROOK PARK",
-    "lat": 35.2576,
-    "lng": -81.13090000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Other Violation",
-    "params": {
-      "populationServed": 241,
-      "violationCategories": "Monitoring and Reporting | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012928699"
-  },
-  {
-    "id": "epa-NC4092081",
-    "source": "EPA",
-    "name": "ASHEBROOK S/D",
-    "lat": 35.8069,
-    "lng": -78.6096,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 53,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048290693"
-  },
-  {
-    "id": "epa-NC1011002",
-    "source": "EPA",
-    "name": "ASHEVILLE ACADEMY FOR GIRLS",
-    "lat": 35.6312,
-    "lng": -82.5693,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 1,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050731008"
-  },
-  {
-    "id": "epa-NC1011034",
-    "source": "EPA",
-    "name": "ASHEVILLE ACADEMY FOR GIRLS- CABINS",
-    "lat": 35.6407,
-    "lng": -82.5768,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 75,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050934129"
-  },
-  {
-    "id": "epa-NC0111010",
-    "source": "EPA",
-    "name": "ASHEVILLE CITY OF",
-    "lat": 35.5811,
-    "lng": -82.538,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Treatment Technique Violation",
-    "params": {
-      "populationServed": 157431,
-      "violationCategories": "Monitoring and Reporting | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012942352"
-  },
-  {
-    "id": "epa-NC0392341",
-    "source": "EPA",
-    "name": "ASHLEY HILLS NORTH S/D",
-    "lat": 35.7853,
-    "lng": -78.63199999999999,
-    "status": "Poor",
-    "color": "#FF1744",
-    "reason": "Maximum Contaminant Level Violation",
-    "params": {
-      "populationServed": 602,
-      "violationCategories": "Maximum Contaminant Level Violation",
-      "healthFlag": "Yes",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012854474"
-  },
-  {
-    "id": "epa-NC0392318",
-    "source": "EPA",
-    "name": "ASHLEY HILLS S/D",
-    "lat": 35.7767,
-    "lng": -78.6118,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 453,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012853643"
-  },
-  {
-    "id": "epa-NC0498500",
-    "source": "EPA",
-    "name": "ASPEN GROVE FWB CHURCH",
-    "lat": 35.6653,
-    "lng": -77.9408,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 35,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050891497"
-  },
-  {
-    "id": "epa-NC0416410",
-    "source": "EPA",
-    "name": "ATLANTIC ELEMENTARY",
-    "lat": 34.855199999999996,
-    "lng": -76.5551,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 115,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110027391837"
-  },
-  {
-    "id": "epa-NC0408015",
-    "source": "EPA",
-    "name": "AULANDER, TOWN OF",
-    "lat": 36.0781,
-    "lng": -76.9426,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Other Violation",
-    "params": {
-      "populationServed": 1438,
-      "violationCategories": "Monitoring and Reporting | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012849668"
-  },
-  {
-    "id": "epa-NC0407020",
-    "source": "EPA",
-    "name": "AURORA WATER SYSTEM",
-    "lat": 35.5249,
-    "lng": -76.8089,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 805,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012852298"
-  },
-  {
-    "id": "epa-NC0197592",
-    "source": "EPA",
-    "name": "AUSTIN COMMUNITY CENTER",
-    "lat": 36.1775,
-    "lng": -81.1998,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Maximum Contaminant Level Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Maximum Contaminant Level Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050910136"
-  },
-  {
-    "id": "epa-NC0382045",
-    "source": "EPA",
-    "name": "AUTRYVILLE, TOWN OF",
-    "lat": 34.9448,
-    "lng": -78.34870000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation | Reporting Violation",
-    "params": {
-      "populationServed": 527,
-      "violationCategories": "Other Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012859344"
-  },
-  {
-    "id": "epa-NC0136294",
-    "source": "EPA",
-    "name": "AUTUMN ACRES S/D",
-    "lat": 35.2816,
-    "lng": -81.1573,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 84,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012927592"
-  },
-  {
-    "id": "epa-NC0241103",
-    "source": "EPA",
-    "name": "AUTUMN FOREST MHP",
-    "lat": 36.1155,
-    "lng": -79.83460000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 686,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012921927"
-  },
-  {
-    "id": "epa-NC3041109",
-    "source": "EPA",
-    "name": "AUTUMN RIDGE S/D",
-    "lat": 36.060599999999994,
-    "lng": -79.77210000000001,
-    "status": "Poor",
-    "color": "#FF1744",
-    "reason": "Maximum Contaminant Level Violation",
-    "params": {
-      "populationServed": 56,
-      "violationCategories": "Maximum Contaminant Level Violation",
-      "healthFlag": "Yes",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110071087137"
-  },
-  {
-    "id": "epa-NC0111134",
-    "source": "EPA",
-    "name": "AVALON ACRES MHP",
-    "lat": 35.583800000000004,
-    "lng": -82.5351,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 65,
-      "violationCategories": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012943182"
-  },
-  {
-    "id": "epa-NC4092107",
-    "source": "EPA",
-    "name": "AVOCET S/D",
-    "lat": 35.7788,
-    "lng": -78.66629999999999,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 566,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048548363"
-  },
-  {
-    "id": "epa-NC0201409",
-    "source": "EPA",
-    "name": "B EVERETT JORDAN ELEM SCHOOL",
-    "lat": 36.0609,
-    "lng": -79.355,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting",
-    "params": {
-      "populationServed": 425,
-      "violationCategories": "Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051087293"
-  },
-  {
-    "id": "epa-NC0276416",
-    "source": "EPA",
-    "name": "BACK CREEK FRIENDS MEETING",
-    "lat": 35.6898,
-    "lng": -79.75840000000001,
+    "name": "BIRCHWOOD INC",
+    "lat": 48.7614,
+    "lng": -100.8466,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation",
@@ -107457,158 +105981,68 @@
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051250445"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050787724"
   },
   {
-    "id": "epa-NC0362120",
+    "id": "epa-ND4800078",
     "source": "EPA",
-    "name": "BADIN SHORES RESORT",
-    "lat": 35.3682,
-    "lng": -79.919,
+    "name": "BISBEE CITY OF",
+    "lat": 48.7241,
+    "lng": -99.23519999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 126,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266893"
+  },
+  {
+    "id": "epa-ND4011639",
+    "source": "EPA",
+    "name": "BORDER LOUNGE",
+    "lat": 48.7849,
+    "lng": -99.8014,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Maximum Contaminant Level Violation | Monitoring Violation",
+    "params": {
+      "populationServed": 30,
+      "violationCategories": "Maximum Contaminant Level Violation | Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050840514"
+  },
+  {
+    "id": "epa-ND0500099",
+    "source": "EPA",
+    "name": "BOTTINEAU CITY OF",
+    "lat": 48.82490000000001,
+    "lng": -100.8673,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring and Reporting",
     "params": {
-      "populationServed": 2743,
+      "populationServed": 2211,
       "violationCategories": "Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012917308"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013273554"
   },
   {
-    "id": "epa-NC0332579",
+    "id": "epa-ND0511294",
     "source": "EPA",
-    "name": "BAHAMA BAPTIST CHURCH",
-    "lat": 36.019,
-    "lng": -78.876,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 110,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050687832"
-  },
-  {
-    "id": "epa-NC4035019",
-    "source": "EPA",
-    "name": "BAILEY FARMS SUBDIVISION",
-    "lat": 36.1091,
-    "lng": -78.2943,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 181,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110070780428"
-  },
-  {
-    "id": "epa-NC0464035",
-    "source": "EPA",
-    "name": "BAILEY, TOWN OF",
-    "lat": 35.9874,
-    "lng": -78.0238,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 566,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012845813"
-  },
-  {
-    "id": "epa-NC0276620",
-    "source": "EPA",
-    "name": "BAILEYS GROVE BAPTIST SCHOOL",
-    "lat": 35.6845,
-    "lng": -79.85470000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Monitoring and Reporting",
-    "params": {
-      "populationServed": 130,
-      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051054069"
-  },
-  {
-    "id": "epa-NC4392192",
-    "source": "EPA",
-    "name": "BAILEY`S LANDING S/D",
-    "lat": 35.7515,
-    "lng": -78.6842,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation | Reporting Violation",
-    "params": {
-      "populationServed": 114,
-      "violationCategories": "Other Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013274580"
-  },
-  {
-    "id": "epa-NC0161015",
-    "source": "EPA",
-    "name": "BAKERSVILLE, TOWN OF",
-    "lat": 36.0458,
-    "lng": -82.1974,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 725,
-      "violationCategories": "Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012907872"
-  },
-  {
-    "id": "epa-NC0150102",
-    "source": "EPA",
-    "name": "BALLOUGH HILLS",
-    "lat": 35.2797,
-    "lng": -83.15289999999999,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 102,
-      "violationCategories": "Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012916274"
-  },
-  {
-    "id": "epa-NC0150545",
-    "source": "EPA",
-    "name": "BALSAM MISSIONARY BAPTIST CH",
-    "lat": 35.2768,
-    "lng": -83.14959999999999,
+    "name": "BOTTINEAU WINTER PARK SKI AREA",
+    "lat": 48.747800000000005,
+    "lng": -100.7914,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation",
@@ -107619,104 +106053,1490 @@
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052872557"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050860270"
   },
   {
-    "id": "epa-NC0197522",
+    "id": "epa-ND0900134",
     "source": "EPA",
-    "name": "BANDITS ROOST PARK AREA A",
-    "lat": 36.2558,
-    "lng": -81.1913,
+    "name": "BUFFALO CITY OF",
+    "lat": 46.8949,
+    "lng": -97.29979999999999,
     "status": "Moderate",
     "color": "#FFD700",
-    "reason": "Monitoring Violation | Reporting Violation",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
     "params": {
-      "populationServed": 142,
-      "violationCategories": "Monitoring Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050771081"
-  },
-  {
-    "id": "epa-NC3097026",
-    "source": "EPA",
-    "name": "BANDITS ROOST PARK AREA B",
-    "lat": 36.2353,
-    "lng": -81.1932,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Reporting Violation",
-    "params": {
-      "populationServed": 102,
-      "violationCategories": "Monitoring Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110069295480"
-  },
-  {
-    "id": "epa-NC3041084",
-    "source": "EPA",
-    "name": "BANK OF OAK RIDGE OPERATIONS CENTER",
-    "lat": 36.0888,
-    "lng": -79.80470000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Reporting Violation | Treatment Technique Violation",
+      "populationServed": 188,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110063369082"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903304"
   },
   {
-    "id": "epa-NC0239445",
+    "id": "epa-ND0411415",
     "source": "EPA",
-    "name": "BANKS UNITED METHODIST CHURCH",
-    "lat": 36.3179,
-    "lng": -78.64110000000001,
+    "name": "BURNING HILLS AMPHITHEATER",
+    "lat": 47.0128,
+    "lng": -103.3301,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 900,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050752994"
+  },
+  {
+    "id": "epa-ND1600159",
+    "source": "EPA",
+    "name": "CARRINGTON CITY OF",
+    "lat": 47.4688,
+    "lng": -98.845,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 2065,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270619"
+  },
+  {
+    "id": "epa-ND5200169",
+    "source": "EPA",
+    "name": "CATHAY CITY OF",
+    "lat": 47.5638,
+    "lng": -99.71459999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 43,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013265288"
+  },
+  {
+    "id": "epa-ND3400170",
+    "source": "EPA",
+    "name": "CAVALIER CITY OF",
+    "lat": 48.7756,
+    "lng": -97.5528,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring and Reporting",
     "params": {
-      "populationServed": 75,
+      "populationServed": 1302,
       "violationCategories": "Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051091251"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013267696"
   },
   {
-    "id": "epa-NC0286101",
+    "id": "epa-ND3111582",
     "source": "EPA",
-    "name": "BANNERTOWN HILLS S/D",
-    "lat": 36.4555,
-    "lng": -80.7033,
+    "name": "CHORD ENERGY",
+    "lat": 48.1924,
+    "lng": -102.3891,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 56,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050644399"
+  },
+  {
+    "id": "epa-ND3900183",
+    "source": "EPA",
+    "name": "CHRISTINE CITY OF",
+    "lat": 46.2528,
+    "lng": -96.9711,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Reporting Violation",
+    "params": {
+      "populationServed": 156,
+      "violationCategories": "Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013268267"
+  },
+  {
+    "id": "epa-ND4700188",
+    "source": "EPA",
+    "name": "CLEVELAND CITY OF",
+    "lat": 46.998200000000004,
+    "lng": -98.9452,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 83,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266722"
+  },
+  {
+    "id": "epa-ND2800194",
+    "source": "EPA",
+    "name": "COLEHARBOR CITY OF",
+    "lat": 47.660799999999995,
+    "lng": -101.46379999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Reporting Violation",
+    "params": {
+      "populationServed": 79,
+      "violationCategories": "Monitoring and Reporting | Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903992"
+  },
+  {
+    "id": "epa-ND3900196",
+    "source": "EPA",
+    "name": "COLFAX CITY OF",
+    "lat": 46.2562,
+    "lng": -96.9741,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Other Violation",
     "params": {
-      "populationServed": 74,
+      "populationServed": 121,
       "violationCategories": "Other Violation",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012873435"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012904795"
   },
   {
-    "id": "epa-NC0392809",
+    "id": "epa-ND0700198",
     "source": "EPA",
-    "name": "BAPTIST GROVE CHURCH",
-    "lat": 35.7542,
-    "lng": -78.69969999999999,
+    "name": "COLUMBUS CITY OF",
+    "lat": 48.743199999999995,
+    "lng": -102.5635,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Other Violation",
+    "params": {
+      "populationServed": 133,
+      "violationCategories": "Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271404"
+  },
+  {
+    "id": "epa-ND0901449",
+    "source": "EPA",
+    "name": "COUNTRY ACRES WATER CO",
+    "lat": 46.9659,
+    "lng": -97.23039999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Other Violation | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 50,
+      "violationCategories": "Other Violation | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013272421"
+  },
+  {
+    "id": "epa-ND0800144",
+    "source": "EPA",
+    "name": "COUNTRY CLUB CO-OP",
+    "lat": 46.9347,
+    "lng": -100.4729,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 162,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271565"
+  },
+  {
+    "id": "epa-ND0900217",
+    "source": "EPA",
+    "name": "DAVENPORT CITY OF",
+    "lat": 46.8851,
+    "lng": -97.2952,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 252,
+      "violationCategories": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271805"
+  },
+  {
+    "id": "epa-ND1300259",
+    "source": "EPA",
+    "name": "DODGE CITY OF",
+    "lat": 47.4028,
+    "lng": -102.56880000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 87,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270325"
+  },
+  {
+    "id": "epa-ND1300276",
+    "source": "EPA",
+    "name": "DUNN CENTER CITY OF",
+    "lat": 47.308699999999995,
+    "lng": -102.5887,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 146,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903509"
+  },
+  {
+    "id": "epa-ND4000277",
+    "source": "EPA",
+    "name": "DUNSEITH CITY OF",
+    "lat": 48.7815,
+    "lng": -99.81200000000001,
+    "status": "Poor",
+    "color": "#FF1744",
+    "reason": "Monitoring and Reporting | Other Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 773,
+      "violationCategories": "Monitoring and Reporting | Other Violation | Treatment Technique Violation",
+      "healthFlag": "Yes",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012905008"
+  },
+  {
+    "id": "epa-ND4901071",
+    "source": "EPA",
+    "name": "EAST CENTRAL REGIONAL WD-TRAILL",
+    "lat": 47.481700000000004,
+    "lng": -97.21069999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 2800,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013267026"
+  },
+  {
+    "id": "epa-ND1900303",
+    "source": "EPA",
+    "name": "ELGIN CITY OF",
+    "lat": 46.376599999999996,
+    "lng": -101.6169,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Reporting Violation",
+    "params": {
+      "populationServed": 642,
+      "violationCategories": "Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270913"
+  },
+  {
+    "id": "epa-ND1100306",
+    "source": "EPA",
+    "name": "ELLENDALE CITY OF",
+    "lat": 46.1061,
+    "lng": -98.5231,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Maximum Contaminant Level Violation",
+    "params": {
+      "populationServed": 1394,
+      "violationCategories": "Maximum Contaminant Level Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270058"
+  },
+  {
+    "id": "epa-ND1800311",
+    "source": "EPA",
+    "name": "EMERADO CITY OF",
+    "lat": 47.9326,
+    "lng": -97.4514,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 414,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270735"
+  },
+  {
+    "id": "epa-ND3900333",
+    "source": "EPA",
+    "name": "FAIRMOUNT CITY OF",
+    "lat": 46.2295,
+    "lng": -96.9594,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 367,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013268285"
+  },
+  {
+    "id": "epa-ND2300544",
+    "source": "EPA",
+    "name": "FAIRVIEW COLONY",
+    "lat": 46.465199999999996,
+    "lng": -98.4778,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 100,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048632217"
+  },
+  {
+    "id": "epa-ND4011780",
+    "source": "EPA",
+    "name": "FAMILY DOLLAR",
+    "lat": 48.7956,
+    "lng": -99.7941,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Violation",
+    "params": {
+      "populationServed": 313,
+      "violationCategories": "",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110070775925"
+  },
+  {
+    "id": "epa-ND5301764",
+    "source": "EPA",
+    "name": "FENDEE ESTATES",
+    "lat": 48.309000000000005,
+    "lng": -103.5064,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 30,
+      "violationCategories": "Monitoring and Reporting | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110063342636"
+  },
+  {
+    "id": "epa-ND0700344",
+    "source": "EPA",
+    "name": "FLAXTON CITY OF",
+    "lat": 48.8195,
+    "lng": -102.5414,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Other Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 66,
+      "violationCategories": "Monitoring and Reporting | Other Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271422"
+  },
+  {
+    "id": "epa-ND1100346",
+    "source": "EPA",
+    "name": "FORBES CITY OF",
+    "lat": 46.1185,
+    "lng": -98.5347,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 53,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270076"
+  },
+  {
+    "id": "epa-ND5010352",
+    "source": "EPA",
+    "name": "FORDVILLE PUBLIC SCHOOL",
+    "lat": 48.370200000000004,
+    "lng": -97.7217,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 75,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050802468"
+  },
+  {
+    "id": "epa-ND1801456",
+    "source": "EPA",
+    "name": "FOREST RIVER COLONY",
+    "lat": 47.920700000000004,
+    "lng": -97.4859,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 100,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270888"
+  },
+  {
+    "id": "epa-ND4100357",
+    "source": "EPA",
+    "name": "FORMAN CITY OF",
+    "lat": 46.1264,
+    "lng": -97.663,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 504,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013268551"
+  },
+  {
+    "id": "epa-ND1200369",
+    "source": "EPA",
+    "name": "FORTUNA CITY OF",
+    "lat": 48.8471,
+    "lng": -103.5363,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 35,
+      "violationCategories": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903484"
+  },
+  {
+    "id": "epa-ND4900382",
+    "source": "EPA",
+    "name": "GALESBURG CITY OF",
+    "lat": 47.4941,
+    "lng": -97.12389999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 108,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266964"
+  },
+  {
+    "id": "epa-ND0900387",
+    "source": "EPA",
+    "name": "GARDNER CITY OF",
+    "lat": 46.9029,
+    "lng": -97.22059999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 74,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110011043940"
+  },
+  {
+    "id": "epa-ND4500396",
+    "source": "EPA",
+    "name": "GLADSTONE CITY OF",
+    "lat": 46.807900000000004,
+    "lng": -102.69600000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 239,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266447"
+  },
+  {
+    "id": "epa-ND3011805",
+    "source": "EPA",
+    "name": "GLEN ULLIN DOLLAR GENERAL",
+    "lat": 46.741,
+    "lng": -101.3069,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 25,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110071367366"
+  },
+  {
+    "id": "epa-ND1700403",
+    "source": "EPA",
+    "name": "GOLVA CITY OF",
+    "lat": 46.92359999999999,
+    "lng": -103.8144,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 61,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270664"
+  },
+  {
+    "id": "epa-ND4200404",
+    "source": "EPA",
+    "name": "GOODRICH CITY OF",
+    "lat": 47.595,
+    "lng": -100.3405,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Maximum Contaminant Level Violation | Monitoring Violation | Monitoring and Reporting | Other Violation",
+    "params": {
+      "populationServed": 98,
+      "violationCategories": "Maximum Contaminant Level Violation | Monitoring Violation | Monitoring and Reporting | Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266232"
+  },
+  {
+    "id": "epa-ND0900412",
+    "source": "EPA",
+    "name": "GRANDIN CITY OF",
+    "lat": 46.9768,
+    "lng": -97.28569999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 173,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271850"
+  },
+  {
+    "id": "epa-ND2500415",
+    "source": "EPA",
+    "name": "GRANVILLE CITY OF",
+    "lat": 48.2597,
+    "lng": -100.67630000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation",
+    "params": {
+      "populationServed": 241,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110011044119"
+  },
+  {
+    "id": "epa-ND2000446",
+    "source": "EPA",
+    "name": "HANNAFORD CITY OF",
+    "lat": 47.4161,
+    "lng": -98.2404,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 131,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110011045289"
+  },
+  {
+    "id": "epa-ND4900465",
+    "source": "EPA",
+    "name": "HATTON CITY OF",
+    "lat": 47.4843,
+    "lng": -97.2097,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 777,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012901627"
+  },
+  {
+    "id": "epa-ND3000473",
+    "source": "EPA",
+    "name": "HEBRON CITY OF",
+    "lat": 46.746900000000004,
+    "lng": -101.2684,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 747,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013269685"
+  },
+  {
+    "id": "epa-ND4600487",
+    "source": "EPA",
+    "name": "HOPE CITY OF",
+    "lat": 47.450199999999995,
+    "lng": -97.75750000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 258,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266651"
+  },
+  {
+    "id": "epa-ND0900488",
+    "source": "EPA",
+    "name": "HORACE CITY OF",
+    "lat": 46.8991,
+    "lng": -97.2084,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 1641,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271896"
+  },
+  {
+    "id": "epa-ND0900492",
+    "source": "EPA",
+    "name": "HUNTER CITY OF",
+    "lat": 46.9016,
+    "lng": -97.2105,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Other Violation | Reporting Violation",
+    "params": {
+      "populationServed": 261,
+      "violationCategories": "Monitoring and Reporting | Other Violation | Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271985"
+  },
+  {
+    "id": "epa-ND2711604",
+    "source": "EPA",
+    "name": "HURLEY ENTERPRISES",
+    "lat": 47.7188,
+    "lng": -103.3806,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 200,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050840140"
+  },
+  {
+    "id": "epa-ND0800083",
+    "source": "EPA",
+    "name": "IMPERIAL VALLEY WATER CO",
+    "lat": 46.9509,
+    "lng": -100.5063,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 345,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271538"
+  },
+  {
+    "id": "epa-ND5301063",
+    "source": "EPA",
+    "name": "INSPIRE COMMUNITIES-SPRINGBROOK",
+    "lat": 48.336200000000005,
+    "lng": -103.536,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 300,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048564433"
+  },
+  {
+    "id": "epa-ND4001136",
+    "source": "EPA",
+    "name": "INTERNATIONAL PEACE GARDEN",
+    "lat": 48.752,
+    "lng": -99.8161,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 25,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050854376"
+  },
+  {
+    "id": "epa-ND2300508",
+    "source": "EPA",
+    "name": "JUD CITY OF",
+    "lat": 46.453199999999995,
+    "lng": -98.5658,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 72,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013268775"
+  },
+  {
+    "id": "epa-ND2500509",
+    "source": "EPA",
+    "name": "KARLSRUHE CITY OF",
+    "lat": 48.2531,
+    "lng": -100.58770000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 82,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903901"
+  },
+  {
+    "id": "epa-ND4010280",
+    "source": "EPA",
+    "name": "KELVIN KLINIC BAR",
+    "lat": 48.736000000000004,
+    "lng": -99.80890000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 50,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050854410"
+  },
+  {
+    "id": "epa-ND5100515",
+    "source": "EPA",
+    "name": "KENMARE CITY OF",
+    "lat": 48.253,
+    "lng": -101.5123,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Other Violation",
+    "params": {
+      "populationServed": 961,
+      "violationCategories": "Monitoring and Reporting | Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013267160"
+  },
+  {
+    "id": "epa-ND4700519",
+    "source": "EPA",
+    "name": "KENSAL CITY OF",
+    "lat": 46.961,
+    "lng": -98.92,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Maximum Contaminant Level Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 163,
+      "violationCategories": "Maximum Contaminant Level Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012902635"
+  },
+  {
+    "id": "epa-ND1300520",
+    "source": "EPA",
+    "name": "KILLDEER CITY OF",
+    "lat": 47.3809,
+    "lng": -102.6453,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 939,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270405"
+  },
+  {
+    "id": "epa-ND3200536",
+    "source": "EPA",
+    "name": "LAKOTA CITY OF",
+    "lat": 47.8698,
+    "lng": -98.2078,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 672,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013267491"
+  },
+  {
+    "id": "epa-ND2300537",
+    "source": "EPA",
+    "name": "LAMOURE CITY OF",
+    "lat": 46.462399999999995,
+    "lng": -98.5758,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 889,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013268891"
+  },
+  {
+    "id": "epa-ND1811323",
+    "source": "EPA",
+    "name": "LARSONS DRIVE INN",
+    "lat": 47.9671,
+    "lng": -97.4907,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 30,
+      "violationCategories": "Monitoring Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050708427"
+  },
+  {
+    "id": "epa-ND4011778",
+    "source": "EPA",
+    "name": "LEGACY CO-OP",
+    "lat": 48.7933,
+    "lng": -99.79140000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 150,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110070766356"
+  },
+  {
+    "id": "epa-ND2600556",
+    "source": "EPA",
+    "name": "LEHR CITY OF",
+    "lat": 46.1583,
+    "lng": -99.4068,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Other Violation",
+    "params": {
+      "populationServed": 80,
+      "violationCategories": "Monitoring and Reporting | Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013269186"
+  },
+  {
+    "id": "epa-ND3900567",
+    "source": "EPA",
+    "name": "LIDGERWOOD CITY OF",
+    "lat": 46.2314,
+    "lng": -96.9621,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 652,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012904884"
+  },
+  {
+    "id": "epa-ND0700569",
+    "source": "EPA",
+    "name": "LIGNITE CITY OF",
+    "lat": 48.8184,
+    "lng": -102.5539,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 155,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012902984"
+  },
+  {
+    "id": "epa-ND5311497",
+    "source": "EPA",
+    "name": "LITTLE BEAVER BAY REC AREA",
+    "lat": 48.382400000000004,
+    "lng": -103.4834,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 40,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050717621"
+  },
+  {
+    "id": "epa-ND5311803",
+    "source": "EPA",
+    "name": "LITTLE EGYPT CAMPGROUND",
+    "lat": 48.3385,
+    "lng": -103.5323,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 20,
+      "violationCategories": "Monitoring Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110071300680"
+  },
+  {
+    "id": "epa-ND2701631",
+    "source": "EPA",
+    "name": "M&M PARK",
+    "lat": 47.7757,
+    "lng": -103.3995,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 35,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048638890"
+  },
+  {
+    "id": "epa-ND5100593",
+    "source": "EPA",
+    "name": "MAKOTI CITY OF",
+    "lat": 48.177600000000005,
+    "lng": -101.57809999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 154,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013267213"
+  },
+  {
+    "id": "epa-ND1300606",
+    "source": "EPA",
+    "name": "MANNING WATER BOARD",
+    "lat": 47.3714,
+    "lng": -102.6306,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Other Violation | Reporting Violation",
+    "params": {
+      "populationServed": 55,
+      "violationCategories": "Monitoring and Reporting | Other Violation | Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270423"
+  },
+  {
+    "id": "epa-ND1101481",
+    "source": "EPA",
+    "name": "MAPLE RIVER HUTTERIAN ASSOCIATION",
+    "lat": 46.105599999999995,
+    "lng": -98.4754,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 140,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048012958"
+  },
+  {
+    "id": "epa-ND4400615",
+    "source": "EPA",
+    "name": "MARMARTH CITY OF",
+    "lat": 46.485,
+    "lng": -103.5104,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 136,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266349"
+  },
+  {
+    "id": "epa-ND2800619",
+    "source": "EPA",
+    "name": "MAX CITY OF",
+    "lat": 47.617,
+    "lng": -101.40679999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Maximum Residual Disinfectant Level | Monitoring and Reporting | Other Violation",
+    "params": {
+      "populationServed": 334,
+      "violationCategories": "Maximum Residual Disinfectant Level | Monitoring and Reporting | Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013269337"
+  },
+  {
+    "id": "epa-ND0500620",
+    "source": "EPA",
+    "name": "MAXBASS CITY OF",
+    "lat": 48.7789,
+    "lng": -100.8373,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Maximum Contaminant Level Violation",
+    "params": {
+      "populationServed": 84,
+      "violationCategories": "Maximum Contaminant Level Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013273616"
+  },
+  {
+    "id": "epa-ND4200626",
+    "source": "EPA",
+    "name": "MC CLUSKY CITY OF",
+    "lat": 47.5936,
+    "lng": -100.3259,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 380,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013266269"
+  },
+  {
+    "id": "epa-ND2701477",
+    "source": "EPA",
+    "name": "MCKENZIE COUNTY WRD",
+    "lat": 47.6965,
+    "lng": -103.4179,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 3895,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110022982619"
+  },
+  {
+    "id": "epa-ND1311473",
+    "source": "EPA",
+    "name": "MEDICINE HOLE GOLF COURSE",
+    "lat": 47.3318,
+    "lng": -102.5926,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 50,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050852564"
+  },
+  {
+    "id": "epa-ND0400638",
+    "source": "EPA",
+    "name": "MEDORA CITY OF",
+    "lat": 46.9803,
+    "lng": -103.3404,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 112,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013273527"
+  },
+  {
+    "id": "epa-ND2311802",
+    "source": "EPA",
+    "name": "MEMORIAL PARK COUNTRY CLUB",
+    "lat": 46.4721,
+    "lng": -98.4983,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 75,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110071084793"
+  },
+  {
+    "id": "epa-ND2800650",
+    "source": "EPA",
+    "name": "MERCER CITY OF",
+    "lat": 47.628499999999995,
+    "lng": -101.4155,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting | Reporting Violation",
+    "params": {
+      "populationServed": 94,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013269355"
+  },
+  {
+    "id": "epa-ND0510107",
+    "source": "EPA",
+    "name": "METIGOSHE CAMPGROUND",
+    "lat": 48.745000000000005,
+    "lng": -100.847,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Reporting Violation",
+    "params": {
+      "populationServed": 18,
+      "violationCategories": "Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050787868"
+  },
+  {
+    "id": "epa-ND0511249",
+    "source": "EPA",
+    "name": "METIGOSHE DRIVE INN",
+    "lat": 48.832800000000006,
+    "lng": -100.7888,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting | Reporting Violation",
+    "params": {
+      "populationServed": 30,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050860252"
+  },
+  {
+    "id": "epa-ND0510106",
+    "source": "EPA",
+    "name": "METIGOSHE MINISTRIES-CENTER SITE",
+    "lat": 48.7449,
+    "lng": -100.8473,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 25,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050787840"
+  },
+  {
+    "id": "epa-ND0511305",
+    "source": "EPA",
+    "name": "METIGOSHE MINISTRIES-PELICAN LAKE",
+    "lat": 48.816100000000006,
+    "lng": -100.8569,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 75,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050860298"
+  },
+  {
+    "id": "epa-ND0300659",
+    "source": "EPA",
+    "name": "MINNEWAUKAN CITY OF",
+    "lat": 48.0362,
+    "lng": -99.35640000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 224,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110011042601"
+  },
+  {
+    "id": "epa-ND5311471",
+    "source": "EPA",
+    "name": "MISSOURI-YELLOWSTONE INTERPRETIVE CENTER",
+    "lat": 48.3756,
+    "lng": -103.4902,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation",
@@ -107727,266 +107547,356 @@
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050776772"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050717578"
   },
   {
-    "id": "epa-NC0326572",
+    "id": "epa-ND1100698",
     "source": "EPA",
-    "name": "BAPTIST UNION MISSIONARY BAPTIST CHURCH",
-    "lat": 35.099,
-    "lng": -78.8334,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Reporting Violation",
-    "params": {
-      "populationServed": 125,
-      "violationCategories": "Monitoring Violation | Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051008306"
-  },
-  {
-    "id": "epa-NC0184407",
-    "source": "EPA",
-    "name": "BARBEE`S GROVE CHURCH",
-    "lat": 35.2661,
-    "lng": -80.29560000000001,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Reporting Violation",
-    "params": {
-      "populationServed": 25,
-      "violationCategories": "Reporting Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050583178"
-  },
-  {
-    "id": "epa-NC0392211",
-    "source": "EPA",
-    "name": "BARCLAY DOWNS S/D",
-    "lat": 35.7799,
-    "lng": -78.62299999999999,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 459,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012855829"
-  },
-  {
-    "id": "epa-NC0111472",
-    "source": "EPA",
-    "name": "BARNARDSVILLE ELEM SCHOOL",
-    "lat": 35.5843,
-    "lng": -82.554,
+    "name": "MONANGO CITY OF",
+    "lat": 46.122499999999995,
+    "lng": -98.44669999999999,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring and Reporting",
     "params": {
-      "populationServed": 460,
+      "populationServed": 36,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903457"
+  },
+  {
+    "id": "epa-ND3400707",
+    "source": "EPA",
+    "name": "MOUNTAIN CITY OF",
+    "lat": 48.7312,
+    "lng": -97.4972,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 92,
       "violationCategories": "Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110052877721"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013267758"
   },
   {
-    "id": "epa-NC0464414",
+    "id": "epa-ND1000721",
     "source": "EPA",
-    "name": "BARNES FARMING CORP MLC  NO 1",
-    "lat": 35.9655,
-    "lng": -77.9951,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 41,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051007227"
-  },
-  {
-    "id": "epa-NC0464420",
-    "source": "EPA",
-    "name": "BARNES FARMING CORP MLC  NO 6",
-    "lat": 35.968199999999996,
-    "lng": -77.9974,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation | Other Violation",
-    "params": {
-      "populationServed": 56,
-      "violationCategories": "Monitoring Violation | Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110051007361"
-  },
-  {
-    "id": "epa-NC0498589",
-    "source": "EPA",
-    "name": "BARNES FARMING CORP MLC  NO 9",
-    "lat": 35.691,
-    "lng": -77.9661,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring Violation",
-    "params": {
-      "populationServed": 40,
-      "violationCategories": "Monitoring Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050890489"
-  },
-  {
-    "id": "epa-NC0464536",
-    "source": "EPA",
-    "name": "BARNES HILL FWB CHURCH",
-    "lat": 35.967999999999996,
-    "lng": -78.0024,
+    "name": "NEKOMA CITY OF",
+    "lat": 48.7417,
+    "lng": -98.46260000000001,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation | Monitoring and Reporting",
     "params": {
-      "populationServed": 45,
+      "populationServed": 50,
       "violationCategories": "Monitoring Violation | Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "Yes"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050973728"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270003"
   },
   {
-    "id": "epa-NC4092066",
+    "id": "epa-ND2100726",
     "source": "EPA",
-    "name": "BARRINGTON HILLS S/D",
-    "lat": 35.8012,
-    "lng": -78.69109999999999,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 122,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110048456693"
-  },
-  {
-    "id": "epa-NC0464101",
-    "source": "EPA",
-    "name": "BASS MH COURT",
-    "lat": 35.9738,
-    "lng": -78.0078,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-    "params": {
-      "populationServed": 97,
-      "violationCategories": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
-      "healthFlag": "No",
-      "mrFlag": "Yes"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012845895"
-  },
-  {
-    "id": "epa-NC0407030",
-    "source": "EPA",
-    "name": "BATH WATER SYSTEM",
-    "lat": 35.528,
-    "lng": -76.7996,
+    "name": "NEW ENGLAND CITY OF",
+    "lat": 46.3927,
+    "lng": -102.4315,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring and Reporting",
     "params": {
-      "populationServed": 290,
+      "populationServed": 600,
       "violationCategories": "Monitoring and Reporting",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012852500"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271208"
   },
   {
-    "id": "epa-NC0299547",
+    "id": "epa-ND1300730",
     "source": "EPA",
-    "name": "BATTLE BRANCH CAFE",
-    "lat": 36.1857,
-    "lng": -80.63759999999999,
+    "name": "NEW HRADEC WATERWORKS",
+    "lat": 47.3762,
+    "lng": -102.64020000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 60,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012903527"
+  },
+  {
+    "id": "epa-ND1900731",
+    "source": "EPA",
+    "name": "NEW LEIPZIG CITY OF",
+    "lat": 46.3701,
+    "lng": -101.622,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 221,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270931"
+  },
+  {
+    "id": "epa-ND1400732",
+    "source": "EPA",
+    "name": "NEW ROCKFORD CITY OF",
+    "lat": 47.7603,
+    "lng": -98.89009999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 1391,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270441"
+  },
+  {
+    "id": "epa-ND0200747",
+    "source": "EPA",
+    "name": "NOME CITY OF",
+    "lat": 46.9848,
+    "lng": -98.0895,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 62,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013273180"
+  },
+  {
+    "id": "epa-ND1200748",
+    "source": "EPA",
+    "name": "NOONAN CITY OF",
+    "lat": 48.825199999999995,
+    "lng": -103.5172,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 121,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270290"
+  },
+  {
+    "id": "epa-ND5101125",
+    "source": "EPA",
+    "name": "NORTH PRAIRIE RWD-SYSTEM 1&2",
+    "lat": 48.250800000000005,
+    "lng": -101.56009999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 7748,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013267455"
+  },
+  {
+    "id": "epa-ND1001380",
+    "source": "EPA",
+    "name": "NORTHEAST RWD-LANGDON BRANCH",
+    "lat": 48.7549,
+    "lng": -98.4214,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 2450,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270021"
+  },
+  {
+    "id": "epa-ND5301079",
+    "source": "EPA",
+    "name": "NORTHWEST RURAL WATER DISTRICT",
+    "lat": 48.3399,
+    "lng": -103.4517,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 5102,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013265554"
+  },
+  {
+    "id": "epa-ND1800753",
+    "source": "EPA",
+    "name": "NORTHWOOD CITY OF",
+    "lat": 47.9296,
+    "lng": -97.49600000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 945,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270833"
+  },
+  {
+    "id": "epa-ND1100758",
+    "source": "EPA",
+    "name": "OAKES CITY OF",
+    "lat": 46.106199999999994,
+    "lng": -98.5356,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation",
     "params": {
-      "populationServed": 0,
+      "populationServed": 1856,
       "violationCategories": "Monitoring Violation",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050805394"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013270192"
   },
   {
-    "id": "epa-NC4392109",
+    "id": "epa-ND1110760",
     "source": "EPA",
-    "name": "BAY LAUREL S/D",
-    "lat": 35.8243,
-    "lng": -78.65939999999999,
+    "name": "OAKES GOLF CLUB",
+    "lat": 46.0606,
+    "lng": -98.49,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting",
+    "params": {
+      "populationServed": 50,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050658221"
+  },
+  {
+    "id": "epa-ND0300762",
+    "source": "EPA",
+    "name": "OBERON CITY OF",
+    "lat": 48.0347,
+    "lng": -99.3721,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 105,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013273484"
+  },
+  {
+    "id": "epa-ND0411808",
+    "source": "EPA",
+    "name": "OLEO ACRES RV PARK",
+    "lat": 46.9944,
+    "lng": -103.41170000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation",
+    "params": {
+      "populationServed": 7,
+      "violationCategories": "Monitoring Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110071769019"
+  },
+  {
+    "id": "epa-ND0200763",
+    "source": "EPA",
+    "name": "ORISKA CITY OF",
+    "lat": 46.9906,
+    "lng": -98.0949,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 118,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013273215"
+  },
+  {
+    "id": "epa-ND0901363",
+    "source": "EPA",
+    "name": "OXBOW CITY OF",
+    "lat": 46.9754,
+    "lng": -97.2447,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Other Violation",
     "params": {
-      "populationServed": 58,
+      "populationServed": 305,
       "violationCategories": "Other Violation",
       "healthFlag": "No",
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012837172"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013272350"
   },
   {
-    "id": "epa-NC0118118",
+    "id": "epa-ND0811391",
     "source": "EPA",
-    "name": "BAY POINTE S/D",
-    "lat": 35.684200000000004,
-    "lng": -81.1703,
-    "status": "Moderate",
-    "color": "#FFD700",
-    "reason": "Other Violation",
-    "params": {
-      "populationServed": 99,
-      "violationCategories": "Other Violation",
-      "healthFlag": "No",
-      "mrFlag": "No"
-    },
-    "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012939320"
-  },
-  {
-    "id": "epa-NC0427452",
-    "source": "EPA",
-    "name": "BAY VILLA RESTAURANT",
-    "lat": 36.4129,
-    "lng": -75.8926,
+    "name": "PIONEER PARK",
+    "lat": 46.9733,
+    "lng": -100.4623,
     "status": "Moderate",
     "color": "#FFD700",
     "reason": "Monitoring Violation",
@@ -107997,6 +107907,96 @@
       "mrFlag": "No"
     },
     "lastUpdated": null,
-    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050758337"
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110050887545"
+  },
+  {
+    "id": "epa-ND3100798",
+    "source": "EPA",
+    "name": "PLAZA CITY OF",
+    "lat": 48.257099999999994,
+    "lng": -102.36980000000001,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Other Violation",
+    "params": {
+      "populationServed": 171,
+      "violationCategories": "Other Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013269818"
+  },
+  {
+    "id": "epa-ND4900803",
+    "source": "EPA",
+    "name": "PORTLAND CITY OF",
+    "lat": 47.4499,
+    "lng": -97.16489999999999,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 606,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110012901645"
+  },
+  {
+    "id": "epa-ND5301766",
+    "source": "EPA",
+    "name": "PRAIRIE VIEW HOA",
+    "lat": 48.309200000000004,
+    "lng": -103.5062,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+    "params": {
+      "populationServed": 226,
+      "violationCategories": "Monitoring and Reporting | Other Violation | Reporting Violation | Treatment Technique Violation",
+      "healthFlag": "No",
+      "mrFlag": "No"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110063364915"
+  },
+  {
+    "id": "epa-ND0100812",
+    "source": "EPA",
+    "name": "REEDER CITY OF",
+    "lat": 46.1102,
+    "lng": -102.5093,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring and Reporting",
+    "params": {
+      "populationServed": 162,
+      "violationCategories": "Monitoring and Reporting",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013273091"
+  },
+  {
+    "id": "epa-ND2100816",
+    "source": "EPA",
+    "name": "REGENT CITY OF",
+    "lat": 46.3857,
+    "lng": -102.4433,
+    "status": "Moderate",
+    "color": "#FFD700",
+    "reason": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation",
+    "params": {
+      "populationServed": 160,
+      "violationCategories": "Monitoring Violation | Monitoring and Reporting | Other Violation | Reporting Violation",
+      "healthFlag": "No",
+      "mrFlag": "Yes"
+    },
+    "lastUpdated": null,
+    "url": "https://echo.epa.gov/detailed-facility-report?fid=110013271226"
   }
 ]
